@@ -11,20 +11,15 @@ public class GameDataManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-
-        // +++ C# 콘솔때와 다르게 이제 Main()함수가 아닌
-        // 모노의 메서드에서 호출될 수 있으므로, 데이터 매니저가 활성화되면 바로 모든 데이터를 한번 받아오자
-        // 이처리는 원하는 시점이 있다면 이전해도 된다
         GameUtil.LoadFullData();
     }
 
-    // --- JsonUtility의 한계를 극복하기 위한 Wrapper 클래스 ---
+    // JsonUtility의 한계를 극복하기 위한 Wrapper 클래스
     [Serializable]
     private class SerializationWrapper<T>
     {
         public List<T> items; // JSON 파일의 루트 키 이름이 "items"여야 함
     }
-    // ---------------------------------------------------
 
     public Dictionary<string, CharacterData> CharacterDataList { get; private set; } = new Dictionary<string, CharacterData>();
     public Dictionary<string, SkillData> SkillDataList { get; private set; } = new Dictionary<string, SkillData>();
@@ -36,21 +31,40 @@ public class GameDataManager : MonoBehaviour
     public Dictionary<string, FieldObjectData> FieldObjectDataList { get; private set; } = new Dictionary<string, FieldObjectData>();
     public Dictionary<string, MonsterData> MonsterDataList { get; private set; } = new Dictionary<string, MonsterData>();
 
-    private Dictionary<string, T> LoadData<T>(string resourcePath) where T : GameDataBase
+    private Dictionary<string, T> LoadData<T>(string tableName) where T : GameDataBase
     {
-        TextAsset jsonAsset = Resources.Load<TextAsset>(resourcePath);
-        if (jsonAsset == null)
+        //string relativePath = $"Assets/Resources/JsonData/{dataTableName}.json";
+        //string fullPath = Path.GetFullPath(relativePath);
+        //return fullPath;
+        string resourcePath = $"JsonOutput/{tableName}";
+
+        TextAsset textAsset = Resources.Load<TextAsset>(resourcePath);
+
+        if (textAsset == null)
         {
-            Debug.LogError($"[Error] 리소스를 찾을 수 없습니다: {resourcePath}");
+            Debug.LogError($"[Error] 리소스를 찾을 수 없습니다: Resources/{resourcePath}");
             return new Dictionary<string, T>();
         }
-        string wrappedJson = "{\"items\":" + jsonAsset.text + "}";
-        var wrapper = JsonUtility.FromJson<SerializationWrapper<T>>(wrappedJson);
-        if (wrapper?.items != null)
+
+        try
         {
-            Debug.Log($"{typeof(T).Name} 데이터를 {wrapper.items.Count}개 로드했습니다.");
-            return wrapper.items.ToDictionary(item => item.Id);
+            string jsonString = textAsset.text;
+
+            string wrappedJson = "{\"items\":" + jsonString + "}";
+            SerializationWrapper<T> wrapper = JsonUtility.FromJson<SerializationWrapper<T>>(wrappedJson);
+
+            if (wrapper != null && wrapper.items != null)
+            {
+                Debug.Log($"{typeof(T).Name} 데이터를 {wrapper.items.Count}개 로드했습니다.");
+                // ToDictionary를 사용하려면 각 클래스(T)에 Id 필드가 있어야 합니다.
+                return wrapper.items.ToDictionary(item => item.Id.ToString());
+            }
         }
+        catch (Exception ex)
+        {
+            Debug.LogError($"[{typeof(T).Name} JSON 로드 오류] {ex.Message}");
+        }
+
         return new Dictionary<string, T>();
     }
 
@@ -83,21 +97,24 @@ public class GameDataManager : MonoBehaviour
     {
         MonsterDataList = LoadData<MonsterData>(jsonPath);
     }
+
     public void LoadDialogueData(string jsonPath)
     {
         DialogueDataList = LoadData<DialogueData>(jsonPath);
     }
+
     public void LoadDialogueGroupData(string jsonPath)
     {
         DialogueGroupDataList = LoadData<DialogueGroupData>(jsonPath);
     }
+
     public void LoadFieldObjectData(string jsonPath)
     {
         FieldObjectDataList = LoadData<FieldObjectData>(jsonPath);
     }
 
 
-    //==========================    아래는 사용을 위한 부분들을 메서드 정의  ====================================
+    // ------------ 아래는 사용을 위한 부분들을 메서드 정의 ---------------
 
     public CharacterData GetCharacterData(string id)
     {
