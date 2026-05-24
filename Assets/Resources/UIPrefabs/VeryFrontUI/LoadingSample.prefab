@@ -189,7 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417bea88a3f2fc04596860f13c281b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadingUi
-  _uiType: 0
   _slider: {fileID: 7792211965219532466}
   _text: {fileID: 0}
 --- !u!114 &3252556738450744007
@@ -204,7 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74352e222ffebf049a9945f23f97df83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIBase
-  _uiType: 1
 --- !u!1 &3893923684825462436
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: abe046b95d39a8d4fa7c45131ddf22f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09e75d2056d5b0847baffe31162156e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

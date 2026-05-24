@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5903125340880727243}
   - component: {fileID: 9223249070353243241}
   - component: {fileID: 3680758889695713141}
-  - component: {fileID: 8987539848546721521}
+  - component: {fileID: 7178553772882486315}
   m_Layer: 0
   m_Name: PlayerIcon
   m_TagString: Player
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimationController
   Animator_Player: {fileID: 4133078838946134203}
---- !u!114 &8987539848546721521
+--- !u!114 &7178553772882486315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,22 +124,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1414813181160197957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96a94923996aff04fb5714f866993087, type: 3}
+  m_Script: {fileID: 11500000, guid: 924315cc21493854292b371438d0dad3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicMovePlayer
+  m_EditorClassIdentifier: Assembly-CSharp::BasicPlayer
   moveSpeed: 4
   runSpeed: 6
-  jumpForce: 7
+  jumpForce: 5
   _groundCheck: {fileID: 563475393534649682}
-  _checkRadius: 0.3
+  _checkRadius: 0.4
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   _attackPoint: {fileID: 85322576171952943}
-  _attackRange: 0.9
+  _attackRange: 0.8
   _monsterLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   _attackDamage: 1
   _animationController: {fileID: 3680758889695713141}
 --- !u!1 &1922868177429864555
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 7771712755310643594}
   - component: {fileID: 4133078838946134203}
   - component: {fileID: 8465050770948961199}
-  - component: {fileID: 3091816115427108169}
+  - component: {fileID: 7223935895954302390}
   m_Layer: 0
   m_Name: Char_Knight
   m_TagString: Untagged
@@ -319,7 +319,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &3091816115427108169
+--- !u!114 &7223935895954302390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

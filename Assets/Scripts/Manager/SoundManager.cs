@@ -2,7 +2,7 @@
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource AudioSourcePlayer;
+    [SerializeField] private AudioSource SFXSourcePlayer;
     [SerializeField] private AudioSource BGMSourcePlayer;
 
     public static SoundManager Inst { get; set; }
@@ -22,7 +22,7 @@ public class SoundManager : MonoBehaviour
     public void PlaySFX(string soundDataId)
     {
 
-        GameUtil.LoadAndPlayAudioClip(AudioSourcePlayer, soundDataId).Forget();
+        GameUtil.LoadAndPlayAudioClip(SFXSourcePlayer, soundDataId).Forget();
     }
 
     // 배경음 재생 (교체 재생)
@@ -38,7 +38,7 @@ public class SoundManager : MonoBehaviour
 
     public void StopSFX()
     {
-        AudioSourcePlayer.Stop();
+        SFXSourcePlayer.Stop();
     }
 
 }

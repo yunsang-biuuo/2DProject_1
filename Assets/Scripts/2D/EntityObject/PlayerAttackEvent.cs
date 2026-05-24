@@ -2,7 +2,7 @@
 
 public class PlayerAttackEvent : MonoBehaviour
 {
-    private BasicMovePlayer _player;
-    void Start() => _player = GetComponentInParent<BasicMovePlayer>();
+    private BasicPlayer _player;
+    void Start() => _player = GetComponentInParent<BasicPlayer>();
     public void OnAttackHit() => _player.OnAttackHit();
 }
