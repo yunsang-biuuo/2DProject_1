@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Gold
   - Map
-  - Enemy
   - Ground
   - Enermy
   layers:
@@ -18,7 +17,7 @@ TagManager:
   - UI
   - Enermy
   - Ground
-  - 
+  - Player
   - 
   - 
   - 

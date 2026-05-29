@@ -25,13 +25,12 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        this.ShowStartupUIOnGameStart();
+
     }
 
     public UIBase OpenUI(UIRootType uiRootType, UIType uiType, bool isInitialHide = false)
     {
         // 딱히 요청이 있진 않고 오픈만 하면 되는 UI에서 사용
-
         var openedUI = GetCreatedUI(uiRootType, uiType);
 
         bool isSetActiveOnOpen = (isInitialHide == false); // 열었을 때 기본적으로 숨겨서 열 것인지 체크
@@ -59,7 +58,7 @@ public class UIManager : MonoBehaviour
         Transform root = null;
         switch (uiRootType) 
         {
-            case UIRootType.BackgroundUI:
+            case UIRootType.BackGroundUI:
                 root = Canvas_BgRoot.transform;
                 break;
             case UIRootType.MainUI:
@@ -105,9 +104,22 @@ public class UIManager : MonoBehaviour
 
     // ========================================================================
 
+    public UIBase OpenBackgroundUI(UIType uiType)
+    {
+        return OpenUI(UIRootType.BackGroundUI, uiType);
+    }
+    public void CloseBackgroundUI(UIType uiType)
+    {
+        CloseUI(UIRootType.BackGroundUI, uiType);
+    }
+
     public UIBase OpenMainUI(UIType uiType)
     {
         return OpenUI(UIRootType.MainUI, uiType);
+    }
+    public void CloseMainUI(UIType uiType)
+    {
+        CloseUI(UIRootType.MainUI, uiType);
     }
 
     public UIBase OpenContentUI(UIType uiType)
@@ -123,10 +135,17 @@ public class UIManager : MonoBehaviour
     {
         return OpenUI(UIRootType.PopupUI, uiType);
     }
-
     public void ClosePopupUI(UIType uiType)
     {
         CloseUI(UIRootType.PopupUI, uiType);
     }
 
+    public UIBase OpenVeryFrontUI(UIType uiType)
+    {
+        return OpenUI(UIRootType.VeryFrontUI, uiType);
+    }
+    public void CloseVeryFrontUI(UIType uiType)
+    {
+        CloseUI(UIRootType.VeryFrontUI, uiType);
+    }
 }

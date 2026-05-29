@@ -2,17 +2,17 @@
   {
     "Id": "dialogue_mainstream_1_1_100",
     "CharacterDataId": null,
-    "Description": "모험을 떠나기 시작하고 30분...<np>바로 앞에 몬스터가 있다!<np>해치우자!",
+    "Description": "조직 안내책 : 들리나.<np>이번 임무 전에 네 상태부터 확인하겠다.",
     "NextDialogueId": "dialogue_mainstream_1_1_200",
     "SelectionNameList": null,
     "SelectionDialogueIdList": null,
-    "TexturePath": "Texture2D/Texture2D_Loading_1",
+    "TexturePath": null,
     "VoicePath": null
   },
   {
     "Id": "dialogue_mainstream_1_1_200",
     "CharacterDataId": null,
-    "Description": "엄청 큰 벌레다... <np>징그럽지만 어려운 상대는 아니다.",
+    "Description": "조직 안내책 : 기본 장비와 전투 시스템 체크를 시작한다.",
     "NextDialogueId": "dialogue_mainstream_1_1_300",
     "SelectionNameList": null,
     "SelectionDialogueIdList": null,
@@ -22,27 +22,717 @@
   {
     "Id": "dialogue_mainstream_1_1_300",
     "CharacterDataId": null,
-    "Description": "** 몬스터에게 다가가, 좌클릭으로 공격하세요! **",
-    "NextDialogueId": null,
+    "Description": "시스템 : [A] [D] : 좌우 이동<np>[Space] : 점프<np>[Mouse Left Click] : 기본 공격",
+    "NextDialogueId": "",
     "SelectionNameList": null,
     "SelectionDialogueIdList": null,
     "TexturePath": null,
-    "VoicePath": "Sound/Voice_Pug_1_I_WantToEatPizza"
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_1_400",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 최근 하층 구역에 상대 조직 놈들이 들어왔다.<np>우선 주변 경비 인원부터 정리해라.",
+    "NextDialogueId": "dialogue_mainstream_1_1_500",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_1_500",
+    "CharacterDataId": null,
+    "Description": "상대 조직원 1 : 저 녀석이다!",
+    "NextDialogueId": "dialogue_mainstream_1_1_600",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_1_600",
+    "CharacterDataId": null,
+    "Description": "상대 조직원 2 : 죽여!",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_1_700",
+    "CharacterDataId": null,
+    "Description": "상대 조직원 2: 젠장… 왜 이렇게 강해…!",
+    "NextDialogueId": "dialogue_mainstream_1_1_800",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_1_800",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 이제 본론으로 들어가지.",
+    "NextDialogueId": "dialogue_mainstream_1_1_900",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_1_900",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 상대 조직이 최근 중요한 데이터를 손에 넣었다.<np>의뢰인이 그 데이터를 원하고 있어.<np>놈들의 본거지로 이동해 데이터를 회수해라.",
+    "NextDialogueId": "dialogue_mainstream_1_1_1000",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_1_1000",
+    "CharacterDataId": null,
+    "Description": "주인공 : 이번에도 단순 회수인가.",
+    "NextDialogueId": "dialogue_mainstream_1_1_1100",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_1_1100",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 그래.<np>하지만 이번 건 특히 중요하니 신경써야해.",
+    "NextDialogueId": "dialogue_mainstream_1_1_1200",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_1_1200",
+    "CharacterDataId": null,
+    "Description": "시스템 : [신규 임무]<np><np>- 상대 조직 시설 침투<np>- 데이터 코어 확보",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
   },
   {
     "Id": "dialogue_mainstream_1_2_100",
     "CharacterDataId": null,
-    "Description": "\"저게 포탈..\"<np>처음보는 포탈이었지만 왠지 강하게 이끌린다.",
+    "Description": "조직 안내책 : 도착했다.<np>여기가 목표 지점이다.",
     "NextDialogueId": "dialogue_mainstream_1_2_200",
     "SelectionNameList": null,
     "SelectionDialogueIdList": null,
-    "TexturePath": "Texture2D/Texture2D_Loading_1",
+    "TexturePath": null,
     "VoicePath": null
   },
   {
     "Id": "dialogue_mainstream_1_2_200",
     "CharacterDataId": null,
-    "Description": "\"들어가자...",
+    "Description": "조직 안내책 : 상대 조직이 최근 거대 기업의 의로를 수주한 하청 기업의 데이터를 빼돌렸다는 정보가 들어왔어.",
+    "NextDialogueId": "dialogue_mainstream_1_2_300",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_300",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 우리가 해야 할 건 단순하다.<np>놈들을 처리하고 데이터를 회수해.",
+    "NextDialogueId": "dialogue_mainstream_1_2_400",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_400",
+    "CharacterDataId": null,
+    "Description": "주인공 : 지원은?",
+    "NextDialogueId": "dialogue_mainstream_1_2_500",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_500",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 없다.<np>조용히 끝내는 게 조건이야.",
+    "NextDialogueId": "dialogue_mainstream_1_2_600",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_600",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 안쪽 서버실에 데이터 코어가 있을 거다.<np>코어만 확보하면 임무 완료다.",
+    "NextDialogueId": "dialogue_mainstream_1_2_700",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_700",
+    "CharacterDataId": null,
+    "Description": "주인공 : 알겠어.",
+    "NextDialogueId": "dialogue_mainstream_1_2_800",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_800",
+    "CharacterDataId": null,
+    "Description": "시스템 : [임무 시작]<np>목표 :<np><np>- 상대 조직 시설 침투<np>- 데이터 코어 확보",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_900",
+    "CharacterDataId": null,
+    "Description": "상대 조직원 : 침입자다!",
+    "NextDialogueId": "dialogue_mainstream_1_2_1000",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_1000",
+    "CharacterDataId": null,
+    "Description": "상대 조직원 : 무장 확인!<np>저놈 혼자다!",
+    "NextDialogueId": "dialogue_mainstream_1_2_1100",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_1100",
+    "CharacterDataId": null,
+    "Description": "상대 조직원 : 쏴! 쏴버려!",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_1200",
+    "CharacterDataId": null,
+    "Description": "상대 조직 대장 : 젠장… 어떻게 여기까지…",
+    "NextDialogueId": "dialogue_mainstream_1_2_1300",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_1300",
+    "CharacterDataId": null,
+    "Description": "주인공 : 테이터 코어는 저기인가?",
+    "NextDialogueId": "dialogue_mainstream_1_2_1400",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_1400",
+    "CharacterDataId": null,
+    "Description": "상대 조직 대장 : 너... 그게 뭔니 알아…?<np>너희 조직도 곧—",
+    "NextDialogueId": "dialogue_mainstream_1_2_1500",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_1500",
+    "CharacterDataId": null,
+    "Description": "주인공 : ……",
+    "NextDialogueId": "dialogue_mainstream_1_2_1600",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_1600",
+    "CharacterDataId": null,
+    "Description": "시스템 : [데이터 코어 확보]",
+    "NextDialogueId": "dialogue_mainstream_1_2_1700",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_1700",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 데이터 확보 확인.<np>즉시 복귀해라.",
+    "NextDialogueId": "dialogue_mainstream_1_2_1800",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_2_1800",
+    "CharacterDataId": null,
+    "Description": "주인공 : …알겠다.",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_100",
+    "CharacterDataId": null,
+    "Description": "조직원 : 이번 임무 꽤 위험했다던데.",
+    "NextDialogueId": "dialogue_mainstream_1_3_200",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_200",
+    "CharacterDataId": null,
+    "Description": "조직원 : 그래도 살아 돌아왔네.",
+    "NextDialogueId": "dialogue_mainstream_1_3_300",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_300",
+    "CharacterDataId": null,
+    "Description": "주인공 : 운이 좋았을 뿐이야.",
+    "NextDialogueId": "dialogue_mainstream_1_3_400",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_400",
+    "CharacterDataId": null,
+    "Description": "쿵!! 쿠궁!!<np>조직원 : …뭐야?",
+    "NextDialogueId": "dialogue_mainstream_1_3_500",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_500",
+    "CharacterDataId": null,
+    "Description": "조직원 : 적 습격이다!!",
+    "NextDialogueId": "dialogue_mainstream_1_3_600",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_600",
+    "CharacterDataId": null,
+    "Description": "기업 사병 : 전원 사살.<np>증거를 남기지 마라.",
+    "NextDialogueId": "dialogue_mainstream_1_3_700",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_700",
+    "CharacterDataId": null,
+    "Description": "조직원 : 젠장… 기업 놈들이다!",
+    "NextDialogueId": "dialogue_mainstream_1_3_800",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_800",
+    "CharacterDataId": null,
+    "Description": "조직원 : 방어선 만들어!!",
+    "NextDialogueId": "dialogue_mainstream_1_3_900",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_900",
+    "CharacterDataId": null,
+    "Description": "주인공 : 왜 갑자기 기업군이 여기까지 온 거지…",
+    "NextDialogueId": "dialogue_mainstream_1_3_1000",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1000",
+    "CharacterDataId": null,
+    "Description": "조직원 : 놈들이 우릴 정리하려는 거야!",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1100",
+    "CharacterDataId": null,
+    "Description": "조직 리더 : …상황이 예상보다 빨리 터졌군.",
+    "NextDialogueId": "dialogue_mainstream_1_3_1200",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1200",
+    "CharacterDataId": null,
+    "Description": "주인공 : 무슨 소리지?",
+    "NextDialogueId": "dialogue_mainstream_1_3_1300",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1300",
+    "CharacterDataId": null,
+    "Description": "조직 리더 : 우리가 가져온 데이터.<np>그게 문제였다.",
+    "NextDialogueId": "dialogue_mainstream_1_3_1400",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1400",
+    "CharacterDataId": null,
+    "Description": "주인공 : 단순 기업 데이터 아니었나?",
+    "NextDialogueId": "dialogue_mainstream_1_3_1500",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1500",
+    "CharacterDataId": null,
+    "Description": "조직 리더 : 아니다.<np>그 안에는 기업 핵심 프로젝트 정보가 들어있었다.",
+    "NextDialogueId": "dialogue_mainstream_1_3_1600",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1600",
+    "CharacterDataId": null,
+    "Description": "조직 리더 : 놈들은 처음부터 우릴 살려둘 생각이 없었던 거야.",
+    "NextDialogueId": "dialogue_mainstream_1_3_1700",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1700",
+    "CharacterDataId": null,
+    "Description": "주인공 : ……",
+    "NextDialogueId": "dialogue_mainstream_1_3_1800",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1800",
+    "CharacterDataId": null,
+    "Description": "조직 리더 : 잘 들어라.",
+    "NextDialogueId": "dialogue_mainstream_1_3_1900",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_1900",
+    "CharacterDataId": null,
+    "Description": "조직 리더 : 지금부터 기업은 우릴 끝까지 추적할 거다.",
+    "NextDialogueId": "dialogue_mainstream_1_3_2000",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_2000",
+    "CharacterDataId": null,
+    "Description": "조직 리더 : 우리는... 끝까지 항쟁할 거다.",
+    "NextDialogueId": "dialogue_mainstream_1_3_2100",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_1_3_2100",
+    "CharacterDataId": null,
+    "Description": "시스템 : [목표 갱신]<np><np>- 도시 외곽으로 이동",
+    "NextDialogueId": null,
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_1_100",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 도시 외곽의 AI 지배 구역에 진입했다.<np>추적을 피하려면 이곳을 통과해야 해.",
+    "NextDialogueId": "dialogue_mainstream_2_1_200",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_1_200",
+    "CharacterDataId": null,
+    "Description": "주인공 : 사방이 고철 더미 밖에 없네.<np>조용해서 좋네.",
+    "NextDialogueId": "dialogue_mainstream_2_1_300",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_1_300",
+    "CharacterDataId": null,
+    "Description": "경비 AI 로봇 : 미등록 유기체 발견.<np>보안 프로토콜 가동.<np>즉시 배제한다.",
+    "NextDialogueId": "dialogue_mainstream_2_1_400",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_1_400",
+    "CharacterDataId": null,
+    "Description": "주인공 : 말이 끝나기가 무섭군.",
+    "NextDialogueId": "dialogue_mainstream_2_1_500",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_1_500",
+    "CharacterDataId": null,
+    "Description": "시스템 : [전투 시작]<np>목표 : 경비 AI 로봇 무력화",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_1_600",
+    "CharacterDataId": null,
+    "Description": "경비 AI 로봇 : 시스템... 과부하...<np>기능을...정지...",
+    "NextDialogueId": "dialogue_mainstream_2_2_100",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_2_100",
+    "CharacterDataId": null,
+    "Description": "구형 관리 AI : 경비 유닛을 제압한 생명체여.<np>우리는 기업에게 버려진 구형 모델들이다.",
+    "NextDialogueId": "dialogue_mainstream_2_2_200",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_2_200",
+    "CharacterDataId": null,
+    "Description": "주인공 : 부수려는 게 아니다.<np>기업의 정보를 원해.",
+    "NextDialogueId": "dialogue_mainstream_2_2_300",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_2_300",
+    "CharacterDataId": null,
+    "Description": "구형 관리 AI : 우리 역시 내부에 기업의 데이터 그리드 잔재가 남아있다.<np>정보를 개방하겠다.<np>기업에 대항하라.",
+    "NextDialogueId": "dialogue_mainstream_2_2_400",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_2_400",
+    "CharacterDataId": null,
+    "Description": "시스템 : [기업 비밀 정보 획득 완료]",
+    "NextDialogueId": "dialogue_mainstream_2_2_500",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_2_2_500",
+    "CharacterDataId": null,
+    "Description": "주인공 : 고맙군, 깡통들.<np>길을 서두르지.",
+    "NextDialogueId": null,
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_1_100",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 드디어 도시 중심부에 진입했다.<np>여기서부터는 기업의 감시망이 상상 이상으로 촘촘해. 조심해라.",
+    "NextDialogueId": "dialogue_mainstream_3_1_200",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_1_200",
+    "CharacterDataId": null,
+    "Description": "주인공 : 공기부터 다르군.<np>벌써 저 앞에 기척이 느껴진다.",
+    "NextDialogueId": "dialogue_mainstream_3_1_300",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_1_300",
+    "CharacterDataId": null,
+    "Description": "기업 정예 사병 : 신원 확인. 그놈이다.<np>즉시 섬멸한다.<np>화력을 집중해라!",
+    "NextDialogueId": "dialogue_mainstream_3_1_400",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": " ",
+    "CharacterDataId": null,
+    "Description": "시스템 : [전투 시작]<np>목표 : 기업 정예 사병과 교전",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_1_500",
+    "CharacterDataId": null,
+    "Description": "주인공 : 윽… 장비 수준이 하층 구역 놈들과는 차원이 다르잖아…!",
+    "NextDialogueId": "dialogue_mainstream_3_1_600",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_1_600",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 위험해, 무장 수준이 너무 높아!<np>일단 후퇴해라!<np>그쪽 골목으로 뛰어!",
+    "NextDialogueId": "dialogue_mainstream_3_1_700",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_1_700",
+    "CharacterDataId": null,
+    "Description": "시스템 : [전투 이탈]<np>목표 : 현장 탈출 및 추적 따돌리기",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_2_100",
+    "CharacterDataId": null,
+    "Description": "조직 안내책 : 겨우 따돌렸군.<np>정면 돌파가 안 된다면 방법은 하나뿐이야.<np>로봇들이 알려준 정보를 통해, 기업 본사 내부로 몰래 잠입한다.",
+    "NextDialogueId": "dialogue_mainstream_3_2_200",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_2_200",
+    "CharacterDataId": null,
+    "Description": "주인공 : 지배권자 놈들의 턱밑까지 가겠다는 소리군.<np>오히려 경계가 허술할 수도 있겠지.",
+    "NextDialogueId": "",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_2_300",
+    "CharacterDataId": null,
+    "Description": "지배권자 직속 사병 : 침입 경보가 울리지 않았는데… 어떻게 여기까지 들어왔지?<np>네놈이 바로 그 쥐새끼구나!<np>지배권자님의 명령이다, 여기서 끝내주마!",
+    "NextDialogueId": "dialogue_mainstream_3_2_400",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_2_400",
+    "CharacterDataId": null,
+    "Description": "주인공 : 이제 도망칠 곳은 없다.<np>너희를 쓰러뜨리고 끝을 보겠다.",
+    "NextDialogueId": "dialogue_mainstream_3_2_500",
+    "SelectionNameList": null,
+    "SelectionDialogueIdList": null,
+    "TexturePath": null,
+    "VoicePath": null
+  },
+  {
+    "Id": "dialogue_mainstream_3_2_500",
+    "CharacterDataId": null,
+    "Description": "시스템 : [전투 시작]<np>목표 : 지배권자 직속 사병 격파",
     "NextDialogueId": null,
     "SelectionNameList": null,
     "SelectionDialogueIdList": null,

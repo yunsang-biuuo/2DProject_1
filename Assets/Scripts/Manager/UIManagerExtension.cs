@@ -3,7 +3,7 @@
 public enum UIRootType
 {
     None = 0,
-    BackgroundUI,
+    BackGroundUI,
     MainUI,
     ContentUI,
     PopupUI,
@@ -13,11 +13,14 @@ public enum UIRootType
 public enum UIType
 {
     PopupSample,
-    LoadingSample,
+    LoadingUI,
     ScrollSample,
-    Layout_Top,
+    InGameMenu,
     DialogueUI,
-    StartLoginUI
+    StartLoginUI,
+    SettingUI,
+    QuitPopup,
+    RobbyUI,
 }
 
 public static class UIManagerExtension
@@ -35,11 +38,11 @@ public static class UIManagerExtension
         uiManager.OpenStartLoginUI();
     }
 
-    // ==============================================================================
-
+    // ------------------------------------------------------------------
+    // veryfrontUI
     public static void OpenStartLoginUI(this UIManager uiManager)
     {
-        var uiBase = uiManager.OpenUI(UIRootType.VeryFrontUI, UIType.StartLoginUI);
+        var uiBase = uiManager.OpenVeryFrontUI(UIType.StartLoginUI);
         if (uiBase == null)
         {
             Debug.LogWarning($"UI가 생성되지 않았습니다");
@@ -48,19 +51,25 @@ public static class UIManagerExtension
     }
     public static void CloseStartLoginUI(this UIManager uiManager)
     {
-        uiManager.CloseUI(UIRootType.VeryFrontUI, UIType.StartLoginUI);
+        uiManager.CloseVeryFrontUI( UIType.StartLoginUI);
     }
 
-    public static void OpenLayout_Top(this UIManager uiManger)
+    public static void OpenLoadingUI(this UIManager uiManager)
     {
-        var uiBase = uiManger.OpenMainUI(UIType.Layout_Top);
+        var uiBase = uiManager.OpenVeryFrontUI(UIType.LoadingUI);
         if (uiBase == null)
         {
             Debug.LogWarning($"UI가 생성되지 않았습니다");
             return;
         }
     }
+    public static void CloseLoadingUI(this UIManager uiManager)
+    {
+        uiManager.CloseVeryFrontUI(UIType.LoadingUI);
+    }
 
+    // ------------------------------------------------------------------
+    // popupUI
     public static void OpenPopupSample(this UIManager uiManger)
     {
         var uiBase = uiManger.OpenPopupUI(UIType.PopupSample);
@@ -72,23 +81,57 @@ public static class UIManagerExtension
     }
     public static void ClosePopupSampleUI(this UIManager uiManager)
     {
-        uiManager.CloseUI(UIRootType.PopupUI, UIType.PopupSample);
+        uiManager.ClosePopupUI(UIType.PopupSample);
     }
 
-    public static void OpenLoadingUI(this UIManager uiManager)
+    public static void OpenQuitPopup(this UIManager uiManger)
     {
-        var uiBase = uiManager.OpenUI(UIRootType.VeryFrontUI, UIType.LoadingSample);
+        var uiBase = uiManger.OpenPopupUI(UIType.QuitPopup);
         if (uiBase == null)
         {
             Debug.LogWarning($"UI가 생성되지 않았습니다");
             return;
         }
     }
-    public static void CloseLoadingUI(this UIManager uiManager)
+    public static void CloseQuitPopup(this UIManager uiManager)
     {
-        uiManager.CloseUI(UIRootType.VeryFrontUI, UIType.LoadingSample);
+        uiManager.ClosePopupUI(UIType.QuitPopup);
     }
 
+    public static void OpenSettingUI(this UIManager uiManger)
+    {
+        var uiBase = uiManger.OpenPopupUI(UIType.SettingUI);
+        if (uiBase == null)
+        {
+            Debug.LogWarning($"UI가 생성되지 않았습니다");
+            return;
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // mainUI
+    public static void OpenInGameMenu(this UIManager uiManger)
+    {
+        var uiBase = uiManger.OpenMainUI(UIType.InGameMenu);
+        if (uiBase == null)
+        {
+            Debug.LogWarning($"UI가 생성되지 않았습니다");
+            return;
+        }
+    }
+
+    public static void OpenRobbyUI(this UIManager uiManger)
+    {
+        var uiBase = uiManger.OpenMainUI(UIType.RobbyUI);
+        if (uiBase == null)
+        {
+            Debug.LogWarning($"UI가 생성되지 않았습니다");
+            return;
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // contentUI
     public static void OpenDialogueUI(this UIManager uiManager, string startDialogueId)
     {
         var uiBase = uiManager.OpenContentUI(UIType.DialogueUI);
@@ -103,5 +146,8 @@ public static class UIManagerExtension
             dialogueUi.StartDialogue(startDialogueId);
         }
     }
+
+    // ------------------------------------------------------------------
+    // BackgroundUI
 
 }
