@@ -33,6 +33,7 @@ public class UIManager : MonoBehaviour
         // 딱히 요청이 있진 않고 오픈만 하면 되는 UI에서 사용
         var openedUI = GetCreatedUI(uiRootType, uiType);
 
+        if (openedUI == null) { Debug.LogError($"[UIManager] 에러 발생! {uiType} 프리팹을 로드하지 못했거나 UIBase 상속 스크립트가 없습니다."); return null; }
         bool isSetActiveOnOpen = (isInitialHide == false); // 열었을 때 기본적으로 숨겨서 열 것인지 체크
         if (_openedUIDic.Contains(uiType) == false)
         {

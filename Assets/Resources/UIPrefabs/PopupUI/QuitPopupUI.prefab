@@ -314,9 +314,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1522279351288627341}
   - component: {fileID: 235881303214525050}
-  - component: {fileID: 3692608246740702624}
   m_Layer: 5
-  m_Name: QuitPopup
+  m_Name: QuitPopupUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,22 +354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46252a4410e22b4e84cac405e592c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopUpSample
-  popupPanel: {fileID: 1425330576773547751}
-  closeButton: {fileID: 4826176074277431526}
-  quitButton: {fileID: 6898734105423569939}
-  restartButton: {fileID: 70053489272751312}
---- !u!114 &3692608246740702624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425330576773547751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74352e222ffebf049a9945f23f97df83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIBase
+  QuitBtn: {fileID: 6898734105423569939}
+  continueBtn: {fileID: 70053489272751312}
+  closeBtn: {fileID: 4826176074277431526}
 --- !u!1 &1799815983589687936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +998,7 @@ GameObject:
   - component: {fileID: 567186646255769366}
   - component: {fileID: 70053489272751312}
   m_Layer: 5
-  m_Name: Btn_Continu
+  m_Name: Btn_Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

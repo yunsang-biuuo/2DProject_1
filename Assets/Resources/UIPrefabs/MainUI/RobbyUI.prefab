@@ -155,7 +155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1378828393, guid: 19c01257a12db7e499a8b72674e19301, type: 3}
+  m_Sprite: {fileID: -2097653460, guid: 18f40a47e9ca37143885f96fe32cd99e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1532299912, guid: 86bf3304edc9ab84b9cb63d8102a44c7, type: 3}
+  m_Sprite: {fileID: -1691053985, guid: c3c3b1090c729aa46a889b1e538e2ff3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -823133018, guid: 3e556815ef39d05419de3ae9845722c1, type: 3}
+  m_Sprite: {fileID: -1669470943, guid: 96d491e865d88a746826eed1657bd189, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -652,7 +652,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6235175286002492925}
   - component: {fileID: 1776348557825907395}
-  - component: {fileID: 8846647182019268309}
   m_Layer: 5
   m_Name: Layout_Bottom
   m_TagString: Untagged
@@ -696,18 +695,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CallBtn
   menuButton: {fileID: 9191710288447023823}
---- !u!114 &8846647182019268309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6907579785053955038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74352e222ffebf049a9945f23f97df83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIBase
 --- !u!1 &7378612470797458067
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2190484846186756765}
+  - component: {fileID: 4780657813876390773}
   m_Layer: 5
   m_Name: RobbyUI
   m_TagString: Untagged
@@ -747,6 +735,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4780657813876390773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378612470797458067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37dfc00739b42f478e18cefad6159b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UILobby
+  chapterButton: {fileID: 9191710288447023823}
+  settingButton: {fileID: 8143277912711910108}
+  storyboardButton: {fileID: 1680263573355014980}
+  exitButton: {fileID: 5870371012549405506}
+  noFunctionButton: {fileID: 7577623162308039054}
 --- !u!1 &7449667558730498231
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +836,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1797970025720778920}
-  - component: {fileID: 1335649675073540547}
   m_Layer: 5
   m_Name: Layout_Top
   m_TagString: Untagged
@@ -859,18 +863,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1335649675073540547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8239175605600295469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74352e222ffebf049a9945f23f97df83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIBase
 --- !u!1 &8310098919395125151
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +875,7 @@ GameObject:
   - component: {fileID: 8851088068305697513}
   - component: {fileID: 1680263573355014980}
   m_Layer: 5
-  m_Name: Btn_
+  m_Name: Btn_StoryBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

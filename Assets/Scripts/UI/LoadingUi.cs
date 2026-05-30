@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +8,12 @@ public class LoadingUI : UIBase
     [SerializeField] private Slider _slider;
     [SerializeField] private Text _text;
 
-    private void OnEnable()
+    private Action _onLoadingComplete;
+
+    public void StartLoading(Action onComplete)
     {
+        _onLoadingComplete = onComplete;
+
         StopAllCoroutines();
         StartCoroutine(LoadingRoutine());
     }
@@ -36,6 +41,7 @@ public class LoadingUI : UIBase
 
         yield return new WaitForSecondsRealtime(0.5f);
 
-        UIManager.Instance.CloseLoadingUI();
+        // 스스로 Close하지 않고, 매니저에게 끝났다고 알려줍니다.
+        _onLoadingComplete?.Invoke();
     }
 }
