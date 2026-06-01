@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3384820109646937875}
   m_Layer: 5
-  m_Name: InGameMenu
+  m_Name: MenuUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,30 +1,23 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class QuitPopupUI : UIBase
+public class QuitPopUI : UIBase
 {
     [Header("Buttons")]
     [SerializeField] private Button QuitBtn;
     [SerializeField] private Button continueBtn;
     [SerializeField] private Button closeBtn;
 
-    private void OnEnable()
+    private void Awake()
     {
         QuitBtn.onClick.AddListener(OnClickQuit);
         continueBtn.onClick.AddListener(OnClickClose);
         closeBtn.onClick.AddListener(OnClickClose);
     }
 
-    private void OnDisable()
-    {
-        QuitBtn.onClick.RemoveListener(OnClickQuit);
-        continueBtn.onClick.RemoveListener(OnClickClose);
-        closeBtn.onClick.RemoveListener(OnClickClose);
-    }
-
     private void OnClickQuit()
     {
-        UIManager.Instance.ClosePopupUI(UIType.QuitPopupUI);
+        UIManager.Instance.ClosePopupUI(UIType.QuitPopUI);
         GameManager.Instance.SaveAndEndGame();
 
 #if UNITY_EDITOR
@@ -36,6 +29,6 @@ public class QuitPopupUI : UIBase
 
     private void OnClickClose()
     {
-        UIManager.Instance.ClosePopupUI(UIType.QuitPopupUI);
+        UIManager.Instance.ClosePopupUI(UIType.QuitPopUI);
     }
 }

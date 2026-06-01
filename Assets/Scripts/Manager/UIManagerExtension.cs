@@ -12,15 +12,21 @@ public enum UIRootType
 
 public enum UIType
 {
-    PopupSample,
-    LoadingUI,
     ScrollSample,
-    InGameMenu,
-    DialogueUI,
+
     StartLoginUI,
+    LoadingUI,
+
+    MenuUI,
+    DialogueUI,
+    
     SettingUI,
-    QuitPopupUI,
+    QuitPopUI,
+    
+    EnterGamePopUI,
     RobbyUI,
+    ChapterScUI,
+    StoryScUI,
 }
 
 public static class UIManagerExtension
@@ -73,7 +79,7 @@ public static class UIManagerExtension
     // popupUI
     public static void OpenQuitPopup(this UIManager uiManger)
     {
-        var uiBase = uiManger.OpenPopupUI(UIType.QuitPopupUI);
+        var uiBase = uiManger.OpenPopupUI(UIType.QuitPopUI);
         if (uiBase == null)
         {
             Debug.LogWarning($"UI가 생성되지 않았습니다");
@@ -82,7 +88,7 @@ public static class UIManagerExtension
     }
     public static void CloseQuitPopup(this UIManager uiManager)
     {
-        uiManager.ClosePopupUI(UIType.QuitPopupUI);
+        uiManager.ClosePopupUI(UIType.QuitPopUI);
     }
 
     public static void OpenSettingUI(this UIManager uiManger)
@@ -94,10 +100,14 @@ public static class UIManagerExtension
             return;
         }
     }
+    public static void CloseSettingUI(this UIManager uiManager)
+    {
+        uiManager.ClosePopupUI(UIType.SettingUI);
+    }
 
     public static void OpenPopupSample(this UIManager uiManger)
     {
-        var uiBase = uiManger.OpenPopupUI(UIType.PopupSample);
+        var uiBase = uiManger.OpenPopupUI(UIType.EnterGamePopUI);
         if (uiBase == null)
         {
             Debug.LogWarning($"UI가 생성되지 않았습니다");
@@ -106,7 +116,7 @@ public static class UIManagerExtension
     }
     public static void ClosePopupSampleUI(this UIManager uiManager)
     {
-        uiManager.ClosePopupUI(UIType.PopupSample);
+        uiManager.ClosePopupUI(UIType.EnterGamePopUI);
     }
 
     // ------------------------------------------------------------------
@@ -120,17 +130,53 @@ public static class UIManagerExtension
             return;
         }
     }
-
-    // ------------------------------------------------------------------
-    // contentUI
-    public static void OpenInGameMenu(this UIManager uiManger)
+    public static void CloseRobby(this UIManager uiManager)
     {
-        var uiBase = uiManger.OpenContentUI(UIType.InGameMenu);
+        uiManager.CloseMainUI(UIType.RobbyUI);
+    }
+
+    public static void OpenChapterScUI(this UIManager uiManger)
+    {
+        var uiBase = uiManger.OpenMainUI(UIType.ChapterScUI);
         if (uiBase == null)
         {
             Debug.LogWarning($"UI가 생성되지 않았습니다");
             return;
         }
+    }
+    public static void CloseChapterScUI(this UIManager uiManager)
+    {
+        uiManager.CloseMainUI(UIType.ChapterScUI);
+    }
+
+    public static void OpenStoryScUI(this UIManager uiManger)
+    {
+        var uiBase = uiManger.OpenMainUI(UIType.StoryScUI);
+        if (uiBase == null)
+        {
+            Debug.LogWarning($"UI가 생성되지 않았습니다");
+            return;
+        }
+    }
+    public static void CloseStoryScUI(this UIManager uiManager)
+    {
+        uiManager.CloseMainUI(UIType.StoryScUI);
+    }
+
+    // ------------------------------------------------------------------
+    // contentUI
+    public static void OpenInGameMenu(this UIManager uiManger)
+    {
+        var uiBase = uiManger.OpenContentUI(UIType.MenuUI);
+        if (uiBase == null)
+        {
+            Debug.LogWarning($"UI가 생성되지 않았습니다");
+            return;
+        }
+    }
+    public static void CloseMenuUI(this UIManager uiManager)
+    {
+        uiManager.CloseContentUI(UIType.MenuUI);
     }
 
     public static void OpenDialogueUI(this UIManager uiManager, string startDialogueId)
