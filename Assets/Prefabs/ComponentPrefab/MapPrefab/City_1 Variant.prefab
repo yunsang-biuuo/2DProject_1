@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8648840755700445820}
   - component: {fileID: 2303560206860641054}
   m_Layer: 0
-  m_Name: BackGround
+  m_Name: Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7002573810509686412}
+  m_Father: {fileID: 9151046286945677573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &8648840755700445820
 Tilemap:
@@ -3349,10 +3349,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: City_1 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2674191780798705939, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_robot_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3242289323761129328, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_robot_2
+      objectReference: {fileID: 0}
     - target: {fileID: 3872134081499934320, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9c9856f325e959f4fbaef975e7ff1d53, type: 3}
+    - target: {fileID: 4041652641094388055, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: 'dialogue_mainstream_3_1_100 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286853017683085107, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_robot_2
+      objectReference: {fileID: 0}
     - target: {fileID: 4613525791607655821, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -550
@@ -3393,6 +3409,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5788531420424672662, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_robot_2
+      objectReference: {fileID: 0}
     - target: {fileID: 6759190888250139262, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -3401,17 +3421,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7308343763819621819, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_robot_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435344691847086998, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: 'dialogue_mainstream_3_1_500 '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4414435120660343033, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4613525791607655821, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
-      insertIndex: 1
+    - targetCorrespondingSourceObject: {fileID: 6906171729699101188, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1644228612850793689}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
---- !u!4 &7002573810509686412 stripped
+--- !u!4 &9151046286945677573 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4613525791607655821, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6906171729699101188, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
   m_PrefabInstance: {fileID: 2389347086668835585}
   m_PrefabAsset: {fileID: 0}

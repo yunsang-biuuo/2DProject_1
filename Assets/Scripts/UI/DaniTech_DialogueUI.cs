@@ -22,6 +22,11 @@ public class DaniTech_DialogueUI : UIBase
         Time.timeScale = 0f;
     }
 
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
+    }
+
     private void Update()
     {
         // Space 바 입력 == Next 버튼과 같은 역할

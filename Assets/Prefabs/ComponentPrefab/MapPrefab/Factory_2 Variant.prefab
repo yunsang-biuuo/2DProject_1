@@ -12,10 +12,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Factory_2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2674191780798705939, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_robot_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3242289323761129328, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_robot_2
+      objectReference: {fileID: 0}
     - target: {fileID: 3872134081499934320, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 35e1af4771d4fb748aca2aa566c3d7c2, type: 3}
+    - target: {fileID: 4041652641094388055, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041652641094388055, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: ' '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286853017683085107, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_robot_2
+      objectReference: {fileID: 0}
     - target: {fileID: 4613525791607655821, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -350
@@ -54,6 +74,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4613525791607655821, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788531420424672662, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_robot_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709716537298618211, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6759190888250139262, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
@@ -3319,6 +3347,14 @@ PrefabInstance:
     - target: {fileID: 6816847689148551055, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_Tiles.Array.data[383].second.m_TileSpriteIndex
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308343763819621819, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: enermy_cyborg_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435344691847086998, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: _spawnObjectDataId
+      value: 'dialogue_mainstream_2_2_100 '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

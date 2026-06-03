@@ -1,17 +1,17 @@
-[
+﻿[
   {
-    "Id": "mob_slim_1",
-    "Name": "슬라이무",
-    "Description": "슬라이무는 공격을 받을 때마다 딸기맛, 초코맛, 바닐라맛으로 변한다",
+    "Id": "enermy_robot2_1",
+    "Name": "경비 로봇 2호기",
+    "Description": "조직의 구역을 순찰하는 소형 로봇입니다.",
     "IconPath": null,
-    "PrefabPath": null
+    "PrefabPath": "Enermy_Robot2"
   },
   {
-    "Id": "mob_dog_1",
-    "Name": "도그",
-    "Description": "도그는 도그다",
+    "Id": "enermy_cyborg_1",
+    "Name": "사이보그 보스",
+    "Description": "스토리에 등장하는 중간 보스입니다.",
     "IconPath": null,
-    "PrefabPath": null
+    "PrefabPath": "Enermy_CyborgBoss"
   },
   {
     "Id": "mob_pigme_1",

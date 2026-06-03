@@ -16,7 +16,6 @@ public enum StartSpawnType
     OnAwake,
     OnEnable,
     OnRange,
-    // UniTask나 코루틴으로 일정 시간마다 랜덤 생성도 구현해보자
 }
 
 public class SpawnSpot : MonoBehaviour
@@ -58,6 +57,7 @@ public class SpawnSpot : MonoBehaviour
         }
     }
 
+    // 타입 정의
     private void StartSpawn()
     {
         switch (_spawnSpotType)
@@ -76,12 +76,13 @@ public class SpawnSpot : MonoBehaviour
                 this.gameObject.SetActive(false);
                 break;
             case SpawnSpotType.Monster:
-                SpawnMonster();
+                SpawnEnermy();
                 this.gameObject.SetActive(false);
                 break;
         }
     }
 
+    // 필드 오브젝트
     private void SpawnFieldObject()
     {
         var data = GameDataManager.Instance.GetFieldObjectData(_spawnObjectDataId);
@@ -101,6 +102,7 @@ public class SpawnSpot : MonoBehaviour
         Instantiate(prefab, this.transform.position, Quaternion.identity);
     }
 
+    // 플레이어 캐릭터 이동
     private void SpawnPlayer()
     {
         if (GameManager.Instance != null && GameManager.Instance.PlayerCharacter != null)
@@ -109,27 +111,32 @@ public class SpawnSpot : MonoBehaviour
         }
     }
 
-    private void SpawnMonster()
+    // 몬스터 생성, 활성화
+    private void SpawnEnermy()
     {
-        var monsterData = GameDataManager.Instance.GetMonsterData(_spawnObjectDataId);
-        if (monsterData == null)
+        var enermyData = GameDataManager.Instance.GetMonsterData(_spawnObjectDataId);
+        if (enermyData == null)
         {
             Debug.LogError($"MonsterData 없음: {_spawnObjectDataId}");
             return;
         }
 
-        var prefab = Resources.Load<GameObject>(monsterData.PrefabPath);
+        string enrmyPrefabPath = $"2DPrefab/Enermy/{enermyData.PrefabPath}";
+
+        var prefab = Resources.Load<GameObject>(enrmyPrefabPath);
         if (prefab == null)
         {
-            Debug.LogError($"몬스터 프리팹 없음: {monsterData.PrefabPath}");
+            Debug.LogError($"몬스터 프리팹 없음: {enrmyPrefabPath} (Assets/Resources/Monsters/ 폴더에 파일이 있는지 확인하세요!)");
             return;
         }
 
         GameObject monsterObj = Instantiate(prefab, this.transform.position, Quaternion.identity);
-
+        monsterObj.name = enermyData.Name;
     }
+
     public void ForceSpawnFromServer()
     {
         StartSpawn();
     }
+
 }
