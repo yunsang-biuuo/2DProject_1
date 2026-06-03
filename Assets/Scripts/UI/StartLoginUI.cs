@@ -20,6 +20,6 @@ public class StartLoginUI : UIBase
     {
         startButton.interactable = false;
 
-        GameManager.Instance.OnLoginSuccess();
+        GameManager.Instance.OnLoginProcess();
     }
 }

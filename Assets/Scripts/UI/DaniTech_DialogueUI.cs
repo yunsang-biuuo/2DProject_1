@@ -12,9 +12,23 @@ public class DaniTech_DialogueUI : UIBase
     private string _currentDialogueId;
     private Queue<string> _descriptionQueue = new Queue<string>();
 
-    private void OnEnable()
+    private void Awake()
     {
         Button_Next.BindOnClickButtonEvent(OnClick_Next);
+    }
+
+    private void OnEnable()
+    {
+        Time.timeScale = 0f;
+    }
+
+    private void Update()
+    {
+        // Space 바 입력 == Next 버튼과 같은 역할
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnClick_Next();
+        }
     }
 
     // 다이얼로그에서 Next 버튼이 눌러질때 호출된다

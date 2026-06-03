@@ -105,7 +105,6 @@ public class CyborgPlayer : MonoBehaviour
     {
         if (_isDead) return;
 
-        // 체력 차감
         _currentHp -= enermydamage;
         Debug.Log($"플레이어가 데미지를 입었습니다. 현재 체력: {_currentHp}/{_maxHp}");
 
@@ -165,13 +164,13 @@ public class CyborgPlayer : MonoBehaviour
     {
         if (_groundCheck != null)
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.red;   // 지면 체크 빨강
             Gizmos.DrawWireSphere(_groundCheck.position, _checkRadius);
         }
 
         if (_attackPoint != null)
         {
-            Gizmos.color = Color.yellow;
+            Gizmos.color = Color.yellow;    // 어택 노랑
             Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
         }
     }

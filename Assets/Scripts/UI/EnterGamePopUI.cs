@@ -14,6 +14,7 @@ public class EnterGamePopUI : UIBase
     [SerializeField] private Button btn_Close;
 
     private string _currentChapterId;
+    private ChapterType _currentChapterType;
 
     private void Awake()
     {
@@ -22,16 +23,18 @@ public class EnterGamePopUI : UIBase
         btn_Enter.onClick.AddListener(OnClickEnter);
     }
 
-    public void SetupPopup(string chapterId)
+    public void SetupPopup(ChapterType chapterType)
     {
-        _currentChapterId = chapterId;
+        _currentChapterType = chapterType;
+        _currentChapterId = chapterType.ToString();
 
+        // 클릭 오브젝트 이름 가져오서 자르기
         if (txt_ChapterName != null)
         {
-            string chapterName = chapterId.Replace("SlotBox_", "")
-                                          .Replace("Chap", "")
-                                          .Replace("chap", "")
-                                          .Replace("_", "-");
+            string chapterName = _currentChapterId.Replace("SlotBox_", "")
+                                                  .Replace("Chap", "")
+                                                  .Replace("chap", "")
+                                                    .Replace("_", "-");
 
             txt_ChapterName.text = $"Would you like to enter Chapter {chapterName}?";
         }
@@ -41,7 +44,7 @@ public class EnterGamePopUI : UIBase
     {
         Debug.Log($"[ChapterEnterPopup] {_currentChapterId} 이동 승인! 등록된 이동 좌표 콜백을 실행합니다.");
 
-        //GameManager.Instance.EnterChapterMap(_currentChapterId);
+        GameManager.Instance.EnterChapterMap(_currentChapterType);
 
         ClosePopup();
     }

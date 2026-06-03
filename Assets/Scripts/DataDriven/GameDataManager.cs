@@ -114,7 +114,7 @@ public class GameDataManager : MonoBehaviour
     }
 
 
-    // ------------ 아래는 사용을 위한 부분들을 메서드 정의 ---------------
+    // -------------- 아래는 사용을 위한 부분들을 메서드 정의 -----------------
 
     public CharacterData GetCharacterData(string id)
     {
