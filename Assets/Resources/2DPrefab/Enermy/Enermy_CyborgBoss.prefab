@@ -223,7 +223,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!70 &507810961002522220
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -395,12 +395,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59d3d66c1679ea44b4e3100e81d57fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnermyCloseR
-  moveSpeed: 2
-  detectRange: 5
-  maxHp: 3
-  _enermyDamage: 1
+  moveSpeed: 3
+  detectRange: 10
+  maxHp: 5
+  _enermyDamage: 2
   dropItemDataId: 
-  attackRange: 1.7
+  attackRange: 2
   attackCooldown: 1.5
   _attackPoint: {fileID: 582478264996153080}
   _playerLayer:

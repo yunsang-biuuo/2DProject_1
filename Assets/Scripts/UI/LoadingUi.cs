@@ -20,7 +20,7 @@ public class LoadingUI : UIBase
 
     private IEnumerator LoadingRoutine()
     {
-        float duration = 3f;
+        float duration = 2f;
         float elapsed = 0f;
         _slider.value = 0f;
 

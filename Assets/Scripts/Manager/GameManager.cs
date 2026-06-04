@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _playerCharacter;
     public GameObject PlayerCharacter => _playerCharacter;
 
-    private GameObject _currentActiveMap; // 현재 화면에 켜진 맵 오브젝트 보관용 변수
+    private GameObject _currentActiveMap;
 
     private void Awake()
     {
@@ -22,7 +23,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         CurrentState = GameState.Init;
-
         UIManager.Instance.ShowStartupUIOnGameStart();
     }
 
@@ -30,11 +30,20 @@ public class GameManager : MonoBehaviour
     {
         CurrentState = GameState.Loading;
         UIManager.Instance.CloseStartLoginUI();
+        ShowLoadingProcess(() => StartCoroutine(ProcessLobby()));
+    }
 
+    public void ShowLoadingProcess(Action onLoadingComplete)
+    {
         var uiBase = UIManager.Instance.OpenLoadingUI();
+
         if (uiBase is LoadingUI loadingUI)
         {
-            loadingUI.StartLoading(() => StartCoroutine(ProcessLobby()));
+            loadingUI.StartLoading(() =>
+            {
+                onLoadingComplete?.Invoke();
+                UIManager.Instance.CloseLoadingUI();
+            });
         }
     }
 
@@ -43,10 +52,8 @@ public class GameManager : MonoBehaviour
     {
         CurrentState = GameState.Lobby;
         UIManager.Instance.CloseStartLoginUI();
-        UIManager.Instance.OpenMainUI(UIType.RobbyUI);
-
+        UIManager.Instance.OpenRobbyUI();
         yield return new WaitForEndOfFrame();
-
         UIManager.Instance.CloseLoadingUI();
     }
 
@@ -59,6 +66,7 @@ public class GameManager : MonoBehaviour
 
         if (BGIController.Instance != null)
         {
+            _currentActiveMap?.SetActive(false); // 기존에 켜진 맵이 있다면 꺼주는 안전장치 추가
             BGIController.Instance.ChangeBackground(chapterType);
         }
 
@@ -73,10 +81,9 @@ public class GameManager : MonoBehaviour
             case ChapterType.SlotBox_Chap3_1: targetMapName = "City_1"; break;
             case ChapterType.SlotBox_Chap3_2: targetMapName = "City_2"; break;
         }
-        
+
         GameObject targetMapObj = null;
 
-        // 꺼져있는 맵 오브젝트까지 완벽하게 찾아내기 위한 방어용 코드
         if (targetMapObj == null)
         {
             var allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
@@ -92,30 +99,35 @@ public class GameManager : MonoBehaviour
 
         if (targetMapObj != null)
         {
+            _currentActiveMap = targetMapObj; // 현재 활성화된 맵 추적용
             targetMapObj.SetActive(true);
 
             SpawnSpot[] spawnSpots = targetMapObj.GetComponentsInChildren<SpawnSpot>(true);
 
-            bool spawnFound = false;
-
             foreach (SpawnSpot spot in spawnSpots)
             {
-                // 타입이 Player인 스팟 찾기
                 if (spot.SpawnSpotType == SpawnSpotType.Player)
                 {
-                    // SpawnSpot 내부에 구현해 둔 캐릭터 좌표 이동 함수
                     spot.ForceSpawnFromServer();
-
-                    spawnFound = true;
                     break;
                 }
             }
-            
         }
         else
         {
             Debug.LogError($"[GameManager] 씬(Hierarchy)에서 '{targetMapName}' 이름을 가진 맵 오브젝트를 찾을 수 없습니다!");
         }
+    }
+
+    public void OnClick_StartGame()
+    {
+        Time.timeScale = 1f;
+    }
+
+    public void ReturnToLobby()
+    {
+        Time.timeScale = 0f;
+        UIManager.Instance.OpenRobbyUI();
     }
 
     // 플레이어 캐릭터 등록
