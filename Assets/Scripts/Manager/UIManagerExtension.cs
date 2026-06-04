@@ -61,6 +61,7 @@ public static class UIManagerExtension
         uiManager.CloseVeryFrontUI( UIType.StartLoginUI);
     }
 
+
     public static UIBase OpenLoadingUI(this UIManager uiManager)
     {
         var uiBase = uiManager.OpenVeryFrontUI(UIType.LoadingUI);
@@ -92,6 +93,7 @@ public static class UIManagerExtension
         uiManager.ClosePopupUI(UIType.QuitPopUI);
     }
 
+
     public static void OpenSettingUI(this UIManager uiManger)
     {
         var uiBase = uiManger.OpenPopupUI(UIType.SettingUI);
@@ -106,6 +108,7 @@ public static class UIManagerExtension
         uiManager.ClosePopupUI(UIType.SettingUI);
     }
 
+
     public static void OpenEnterGamePopUI(this UIManager uiManger)
     {
         var uiBase = uiManger.OpenPopupUI(UIType.EnterGamePopUI);
@@ -119,6 +122,7 @@ public static class UIManagerExtension
     {
         uiManager.ClosePopupUI(UIType.EnterGamePopUI);
     }
+
 
     public static void OpenClearGamePopUI(this UIManager uiManger)
     {
@@ -150,6 +154,7 @@ public static class UIManagerExtension
         uiManager.CloseMainUI(UIType.RobbyUI);
     }
 
+
     public static void OpenChapterScUI(this UIManager uiManger)
     {
         var uiBase = uiManger.OpenMainUI(UIType.ChapterScUI);
@@ -163,6 +168,7 @@ public static class UIManagerExtension
     {
         uiManager.CloseMainUI(UIType.ChapterScUI);
     }
+
 
     public static void OpenStoryScUI(this UIManager uiManger)
     {
@@ -193,6 +199,7 @@ public static class UIManagerExtension
     {
         uiManager.CloseContentUI(UIType.MenuUI);
     }
+
 
     public static void OpenDialogueUI(this UIManager uiManager, string startDialogueId)
     {

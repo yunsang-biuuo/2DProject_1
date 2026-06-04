@@ -31,6 +31,20 @@ public class SoundManager : MonoBehaviour
         GameUtil.LoadAndPlayAudioClip(BGMSourcePlayer, soundDataId, isLoop: true).Forget();
     }
 
+    public float GetBGMVolume()
+    {
+        return BGMSourcePlayer != null ? BGMSourcePlayer.volume : 0.5f;
+    }
+
+    // [추가] 슬라이더 값을 받아 실제 볼륨 수정
+    public void SetBGMVolume(float volume)
+    {
+        if (BGMSourcePlayer != null)
+        {
+            BGMSourcePlayer.volume = volume;
+        }
+    }
+
     public void StopBGM()
     {
         BGMSourcePlayer.Stop();
