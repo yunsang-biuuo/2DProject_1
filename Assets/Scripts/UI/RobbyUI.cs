@@ -25,23 +25,22 @@ public class RobbyUI : UIBase
 
     private void OnClickChapterButton()
     {
-        UIManager.Instance.OpenMainUI(UIType.ChapterScUI);
-        UIManager.Instance.CloseMainUI(UIType.RobbyUI);
+        UIManager.Instance.OpenChapterScUI();
     }
 
     private void OnClickSettingButton()
     {
-        UIManager.Instance.OpenPopupUI(UIType.SettingUI);
+        UIManager.Instance.OpenSettingUI();
     }
 
     private void OnClickStoryboardButton()
     {
-        UIManager.Instance.OpenMainUI(UIType.StoryScUI);
+        UIManager.Instance.OpenStoryScUI();
     }
 
     private void OnClickExitButton()
     {
-        UIManager.Instance.OpenPopupUI(UIType.QuitPopUI);
+        UIManager.Instance.OpenQuitPopUI();
     }
 
     private void OnClickNoFunctionButton()

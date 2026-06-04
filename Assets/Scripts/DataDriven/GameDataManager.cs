@@ -153,9 +153,21 @@ public class GameDataManager : MonoBehaviour
 
     public DialogueData GetDialogueData(string dataId)
     {
-        if (DialogueDataList == null || string.IsNullOrEmpty(dataId)) return null;
+        //if (DialogueDataList == null || string.IsNullOrEmpty(dataId)) return null;
 
-        return DialogueDataList.TryGetValue(dataId, out var data) ? data : null;
+        //return DialogueDataList.TryGetValue(dataId, out var data) ? data : null;
+        if (DialogueDataList == null || string.IsNullOrEmpty(dataId))
+        {
+            return null;
+        }
+
+        string cleanId = dataId.Trim();
+
+        if (DialogueDataList.TryGetValue(cleanId, out var data))
+        {
+            return data;
+        }
+        return null;
     }
 
     public DialogueGroupData GetDialogueGroupData(string dataId)

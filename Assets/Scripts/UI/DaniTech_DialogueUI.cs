@@ -76,9 +76,9 @@ public class DaniTech_DialogueUI : UIBase
     }
 
     // 다이얼로그를 시작하는 메서드 (외부에서 UIManager를 통해 다이얼로그 시작을 요청할때도 쓴다!)
-    public void StartDialogue(string dialogeId)
+    public void StartDialogue(string dialogueId)
     {
-        var dialogueData = GameDataManager.Instance.GetDialogueData(dialogeId);
+        var dialogueData = GameDataManager.Instance.GetDialogueData(dialogueId);
         if (dialogueData == null)
         {
             Debug.LogWarning($"다이얼로그 데이터가 존재하지 않습니다 {dialogueData}");
@@ -86,7 +86,7 @@ public class DaniTech_DialogueUI : UIBase
         }
 
         // 현재 진행중인 다이얼로그 Id는 다음 다이얼로그가 있는지 체크할 때 쓸 수 있도록 보관한다
-        _currentDialogueId = dialogeId;
+        _currentDialogueId = dialogueId;
 
         // 혹시 현재 대사가 너무 길거나 다음 페이지 처리가 필요할 때 <np> 키워드로 잘라주자!
         if (dialogueData.Description.Contains("<np>"))

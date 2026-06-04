@@ -17,7 +17,7 @@ public class QuitPopUI : UIBase
 
     private void OnClickQuit()
     {
-        UIManager.Instance.ClosePopupUI(UIType.QuitPopUI);
+        UIManager.Instance.CloseQuitPopUI();
         GameManager.Instance.SaveAndEndGame();
 
 #if UNITY_EDITOR
@@ -29,6 +29,6 @@ public class QuitPopUI : UIBase
 
     private void OnClickClose()
     {
-        UIManager.Instance.ClosePopupUI(UIType.QuitPopUI);
+        UIManager.Instance.CloseQuitPopUI();
     }
 }

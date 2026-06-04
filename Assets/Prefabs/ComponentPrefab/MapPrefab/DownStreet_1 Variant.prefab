@@ -3322,7 +3322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7435344691847086998, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: _spawnObjectDataId
-      value: 'dialogue_mainstream_1_1_700 '
+      value: dialogue_mainstream_1_1_700
       objectReference: {fileID: 0}
     - target: {fileID: 7934105177316998131, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_Size.x

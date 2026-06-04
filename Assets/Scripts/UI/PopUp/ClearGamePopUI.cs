@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ClearGamePopUI : UIBase
+public class StoryScUI : UIBase
 {
     [Header("Buttons")]
     [SerializeField] private Button acceptBtn;

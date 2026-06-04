@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         ShowLoadingProcess(() => StartCoroutine(ProcessLobby()));
     }
 
+    // 로딩 UI 모듈화
     public void ShowLoadingProcess(Action onLoadingComplete)
     {
         var uiBase = UIManager.Instance.OpenLoadingUI();
@@ -61,8 +62,8 @@ public class GameManager : MonoBehaviour
     {
         CurrentState = GameState.Playing;
 
-        UIManager.Instance.CloseMainUI(UIType.RobbyUI);
-        UIManager.Instance.CloseContentUI(UIType.ChapterScUI);
+        UIManager.Instance.CloseRobbyUI();
+        UIManager.Instance.CloseChapterScUI();
 
         if (BGIController.Instance != null)
         {

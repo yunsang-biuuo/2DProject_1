@@ -78,7 +78,7 @@ public static class UIManagerExtension
 
     // ------------------------------------------------------------------
     // popupUI
-    public static void OpenQuitPopup(this UIManager uiManger)
+    public static void OpenQuitPopUI(this UIManager uiManger)
     {
         var uiBase = uiManger.OpenPopupUI(UIType.QuitPopUI);
         if (uiBase == null)
@@ -87,7 +87,7 @@ public static class UIManagerExtension
             return;
         }
     }
-    public static void CloseQuitPopup(this UIManager uiManager)
+    public static void CloseQuitPopUI(this UIManager uiManager)
     {
         uiManager.ClosePopupUI(UIType.QuitPopUI);
     }
@@ -104,20 +104,6 @@ public static class UIManagerExtension
     public static void CloseSettingUI(this UIManager uiManager)
     {
         uiManager.ClosePopupUI(UIType.SettingUI);
-    }
-
-    public static void OpenPopupSample(this UIManager uiManger)
-    {
-        var uiBase = uiManger.OpenPopupUI(UIType.EnterGamePopUI);
-        if (uiBase == null)
-        {
-            Debug.LogWarning($"UI가 생성되지 않았습니다");
-            return;
-        }
-    }
-    public static void ClosePopupSampleUI(this UIManager uiManager)
-    {
-        uiManager.ClosePopupUI(UIType.EnterGamePopUI);
     }
 
     public static void OpenEnterGamePopUI(this UIManager uiManger)
@@ -159,7 +145,7 @@ public static class UIManagerExtension
             return;
         }
     }
-    public static void CloseRobby(this UIManager uiManager)
+    public static void CloseRobbyUI(this UIManager uiManager)
     {
         uiManager.CloseMainUI(UIType.RobbyUI);
     }

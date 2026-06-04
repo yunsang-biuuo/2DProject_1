@@ -45,12 +45,12 @@ public class EnterGamePopUI : UIBase
         Debug.Log($"[ChapterEnterPopup] {_currentChapterId} 이동 승인! 등록된 이동 좌표 콜백을 실행합니다.");
 
         GameManager.Instance.EnterChapterMap(_currentChapterType);
-
+        GameManager.Instance.OnClick_StartGame();
         ClosePopup();
     }
 
     private void ClosePopup()
     {
-        UIManager.Instance.ClosePopupUI(UIType.EnterGamePopUI);
+        UIManager.Instance.CloseEnterGamePopUI();
     }
 }

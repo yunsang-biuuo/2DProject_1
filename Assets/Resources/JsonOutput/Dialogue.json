@@ -650,7 +650,7 @@
     "VoicePath": null
   },
   {
-    "Id": " ",
+    "Id": "dialogue_mainstream_3_1_400",
     "CharacterDataId": null,
     "Description": "시스템 : [전투 시작]<np>목표 : 기업 정예 사병과 교전",
     "NextDialogueId": "",
