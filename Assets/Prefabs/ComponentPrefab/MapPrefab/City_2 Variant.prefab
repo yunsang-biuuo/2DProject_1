@@ -199,6 +199,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4623684894158433166, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 5788531420424672662, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: _spawnObjectDataId
       value: enermy_cyborg_3

@@ -7,7 +7,7 @@ public class StoryBoardUI : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button closeBtn;
 
-    private void Awake()
+    private void Start()
     {
         closeBtn.onClick.AddListener(OnClickClose);
     }

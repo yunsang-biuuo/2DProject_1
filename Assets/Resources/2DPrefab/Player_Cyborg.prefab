@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CyborgPlayer
   _attackDamage: 1
   _maxHp: 60
-  moveSpeed: 5
+  moveSpeed: 7
   runSpeed: 6
   jumpForce: 5
   _attackPoint: {fileID: 7758832215646989959}

@@ -129,6 +129,12 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         UIManager.Instance.OpenRobbyUI();
+
+        CyborgPlayer player = FindObjectOfType<CyborgPlayer>();
+        if (player != null)
+        {
+            player.ResetHP();
+        }
     }
 
     // 플레이어 캐릭터 등록

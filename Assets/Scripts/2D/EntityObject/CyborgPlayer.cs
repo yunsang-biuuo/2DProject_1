@@ -47,7 +47,7 @@ public class CyborgPlayer : MonoBehaviour
     }
     void Start()
     {
-        _currentHp = _maxHp;
+        ResetHP();
     }
 
     void Update()
@@ -90,6 +90,11 @@ public class CyborgPlayer : MonoBehaviour
 
         float currentSpeed = _isRunning ? runSpeed : moveSpeed;
         _rigidbody.linearVelocity = new Vector2(_horizontalInput * currentSpeed, _rigidbody.linearVelocity.y);
+    }
+
+    public void ResetHP()
+    {
+        _currentHp = _maxHp;
     }
 
     public void Attack()    // 공격 순서 계산 및 실행 함수

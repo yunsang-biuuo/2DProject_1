@@ -30,7 +30,13 @@ public class ChapterScUI : UIBase
 
     private void Start()
     {
-        closeBtn.onClick.AddListener(() => UIManager.Instance.CloseMainUI(UIType.ChapterScUI));
+        closeBtn.onClick.AddListener(OnClickClose);
+    }
+
+    private void OnClickClose()
+
+    {
+        UIManager.Instance.CloseChapterScUI();
     }
 
     private void InitChapterButtons()
