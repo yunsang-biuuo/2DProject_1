@@ -1,0 +1,433 @@
+fileFormatVersion: 2
+guid: 4a492e6240fc0c946a3ab66c2aaee99a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_25
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 0
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340c768e7de5d094ba7f50852ed82ce2
+      internalID: -1774844291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_26
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 0
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6a28939036f62478e7ac12a8f8961c
+      internalID: 1244639231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_27
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 0
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d2a6925120de740bbdca16e6d8e6e2
+      internalID: 1528849519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_28
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 0
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d3fd99b952e9b47b98df99b070e1ee
+      internalID: 1005664456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_29
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 0
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cba4963697d50c43b7ff0fe8e5b0611
+      internalID: -1677521287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_30
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 0
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d70a77f1d55f6e4393a25f2a300b444
+      internalID: -347836851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_31
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 0
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa5cbaea7e488345ace65f24446ac8f
+      internalID: 1284388197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_32
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 0
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0ac655c079ddb478296dcab7f02402
+      internalID: 2130889591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_33
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 0
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b95bde3f7d28a248917b0c6400451b3
+      internalID: 849106435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_34
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 0
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606e0c0aa91fee843b8799a22931010a
+      internalID: 920427801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_35
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 0
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f110916c8a5e94f838e8c580717670
+      internalID: -1237623612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot3attack1-Sheet[32height48wide]_36
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 0
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c14d70855476ca43820af31bb41d91d
+      internalID: 1209795232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 20c267abfc223264887f10f04ae6deef
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      robot3attack1-Sheet[32height48wide]_0: 1849377113
+      robot3attack1-Sheet[32height48wide]_1: -401681594
+      robot3attack1-Sheet[32height48wide]_10: 436305840
+      robot3attack1-Sheet[32height48wide]_11: 1610628934
+      robot3attack1-Sheet[32height48wide]_12: -1220405335
+      robot3attack1-Sheet[32height48wide]_13: -91588469
+      robot3attack1-Sheet[32height48wide]_14: -1940219931
+      robot3attack1-Sheet[32height48wide]_15: -1322545857
+      robot3attack1-Sheet[32height48wide]_16: 1635902155
+      robot3attack1-Sheet[32height48wide]_17: -1547813645
+      robot3attack1-Sheet[32height48wide]_18: -385117670
+      robot3attack1-Sheet[32height48wide]_19: 493564784
+      robot3attack1-Sheet[32height48wide]_2: 21478418
+      robot3attack1-Sheet[32height48wide]_20: 186669628
+      robot3attack1-Sheet[32height48wide]_21: -267260598
+      robot3attack1-Sheet[32height48wide]_22: -1161462738
+      robot3attack1-Sheet[32height48wide]_23: -51723904
+      robot3attack1-Sheet[32height48wide]_24: -2144138196
+      robot3attack1-Sheet[32height48wide]_25: -1774844291
+      robot3attack1-Sheet[32height48wide]_26: 1244639231
+      robot3attack1-Sheet[32height48wide]_27: 1528849519
+      robot3attack1-Sheet[32height48wide]_28: 1005664456
+      robot3attack1-Sheet[32height48wide]_29: -1677521287
+      robot3attack1-Sheet[32height48wide]_3: 1074862686
+      robot3attack1-Sheet[32height48wide]_30: -347836851
+      robot3attack1-Sheet[32height48wide]_31: 1284388197
+      robot3attack1-Sheet[32height48wide]_32: 2130889591
+      robot3attack1-Sheet[32height48wide]_33: 849106435
+      robot3attack1-Sheet[32height48wide]_34: 920427801
+      robot3attack1-Sheet[32height48wide]_35: -1237623612
+      robot3attack1-Sheet[32height48wide]_36: 1209795232
+      robot3attack1-Sheet[32height48wide]_4: 1431877957
+      robot3attack1-Sheet[32height48wide]_5: -1670634275
+      robot3attack1-Sheet[32height48wide]_6: 581366793
+      robot3attack1-Sheet[32height48wide]_7: -204383326
+      robot3attack1-Sheet[32height48wide]_8: 1185604586
+      robot3attack1-Sheet[32height48wide]_9: 838977767
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

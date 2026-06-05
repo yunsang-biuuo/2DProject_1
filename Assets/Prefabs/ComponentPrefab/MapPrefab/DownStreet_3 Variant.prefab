@@ -18,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2674191780798705939, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: _spawnObjectDataId
-      value: enermy_cyborg_1
+      value: enermy_cyborg_3
       objectReference: {fileID: 0}
     - target: {fileID: 3242289323761129328, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: _spawnObjectDataId
-      value: enermy_cyborg_1
+      value: enermy_cyborg_3
       objectReference: {fileID: 0}
     - target: {fileID: 4041652641094388055, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: _spawnObjectDataId
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4286853017683085107, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: _spawnObjectDataId
-      value: enermy_cyborg_1
+      value: enermy_cyborg_3
       objectReference: {fileID: 0}
     - target: {fileID: 4613525791607655821, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5788531420424672662, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: _spawnObjectDataId
-      value: enermy_cyborg_1
+      value: enermy_cyborg_3
       objectReference: {fileID: 0}
     - target: {fileID: 6816847689148551055, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: m_Size.y
@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7308343763819621819, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: _spawnObjectDataId
-      value: enermy_cyborg_1
+      value: enermy_cyborg_3
       objectReference: {fileID: 0}
     - target: {fileID: 7435344691847086998, guid: 7e99fe562a46d474db4c583067a198d2, type: 3}
       propertyPath: _spawnObjectDataId

@@ -7,17 +7,38 @@
     "PrefabPath": "Enermy_Robot2"
   },
   {
+    "Id": "enermy_gangster_2",
+    "Name": "상대 갱단원",
+    "Description": "하층 구역 갱단 조직원입니다.",
+    "IconPath": null,
+    "PrefabPath": "Enermy_Gangster2"
+  },
+  {
+    "Id": "enermy_gangster_3",
+    "Name": "상대 갱단 보스",
+    "Description": "하층 구역 갱단 조직 보스입니다.",
+    "IconPath": null,
+    "PrefabPath": "Enermy_Gangster3"
+  },
+  {
     "Id": "enermy_cyborg_1",
+    "Name": "기업 사이보그 로봇",
+    "Description": "거대 기업의 AI 로봇입니다.",
+    "IconPath": null,
+    "PrefabPath": "Enermy_Cyborg1"
+  },
+  {
+    "Id": "enermy_cyborg_0",
     "Name": "사이보그 보스",
     "Description": "스토리에 등장하는 중간 보스입니다.",
     "IconPath": null,
     "PrefabPath": "Enermy_CyborgBoss"
   },
   {
-    "Id": "mob_pigme_1",
-    "Name": "피그미",
-    "Description": "피그미는 충돌하면 사라진다. 간헐적으로 금화가 터져나온다.",
+    "Id": "enermy_cyborg_3",
+    "Name": "근접 사이보그 사병",
+    "Description": "거대 기업의 사이보그 의체를 장착한 사병입니다.",
     "IconPath": null,
-    "PrefabPath": null
+    "PrefabPath": "Enermy_Cyborg3"
   }
 ]

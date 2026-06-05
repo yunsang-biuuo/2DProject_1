@@ -241,7 +241,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: aac2345e8704a6a4a81e847e3bad2b81, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -366,8 +366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnermyClose
   moveSpeed: 2
   detectRange: 10
-  maxHp: 3
-  _enermyDamage: 1
+  maxHp: 8
+  _enermyDamage: 2
   dropItemDataId: 
   attackRange: 2
   attackCooldown: 3

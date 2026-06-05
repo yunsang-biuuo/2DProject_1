@@ -6,15 +6,15 @@ public class CyborgPlayer : MonoBehaviour
 
     [Header("기본 설정")]
     [SerializeField] private int _attackDamage = 1;
-    [SerializeField] private int _maxHp = 10;
-    public float moveSpeed = 4f;
+    [SerializeField] private int _maxHp = 60;
+    public float moveSpeed = 5f;
     public float runSpeed = 6f;
     public float jumpForce = 5f;
     public static bool InputEnable = true;
 
     [Header("공격 설정")]
     [SerializeField] private Transform _attackPoint;
-    [SerializeField] private float _attackRange = 0.8f;
+    [SerializeField] private float _attackRange = 1.5f;
     [SerializeField] private LayerMask _enermyLayer;
 
     [Header("애니메이션")]

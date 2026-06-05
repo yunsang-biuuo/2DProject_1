@@ -100,7 +100,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.9, y: 1.8}
+  m_Size: {x: 1.5, y: 2}
   m_Direction: 0
 --- !u!114 &5903508492768610118
 MonoBehaviour:
@@ -128,18 +128,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CyborgPlayer
   _attackDamage: 1
-  _maxHp: 10
-  moveSpeed: 4
+  _maxHp: 60
+  moveSpeed: 5
   runSpeed: 6
-  jumpForce: 10
+  jumpForce: 5
   _attackPoint: {fileID: 7758832215646989959}
-  _attackRange: 0.8
+  _attackRange: 1.5
   _enermyLayer:
     serializedVersion: 2
     m_Bits: 64
   _animationController: {fileID: 5903508492768610118}
   _groundCheck: {fileID: 8969470884368752607}
-  _checkRadius: 0.2
+  _checkRadius: 0.5
   _groundLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -295,7 +295,7 @@ Transform:
   m_GameObject: {fileID: 7117385557053453203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.044, y: -0.72, z: 0}
+  m_LocalPosition: {x: 0.044, y: -1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

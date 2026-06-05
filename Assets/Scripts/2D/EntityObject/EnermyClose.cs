@@ -5,13 +5,13 @@ public class EnermyClose : MonoBehaviour
 {
     [Header("Status")]
     [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float detectRange = 5f;
-    [SerializeField] private int maxHp = 3;
-    [SerializeField] private int _enermyDamage = 1;
+    [SerializeField] private float detectRange = 10f;
+    [SerializeField] private int maxHp = 10;
+    [SerializeField] private int _enermyDamage = 2;
     [SerializeField] private string dropItemDataId; // 드롭할 아이템 데이터 ID
 
     [Header("Setting")]
-    [SerializeField] private float attackRange = 1.5f;
+    [SerializeField] private float attackRange = 2f;
     [SerializeField] private float attackCooldown = 2.5f;
     [SerializeField] private Transform _attackPoint;
     [SerializeField] private LayerMask _playerLayer;
