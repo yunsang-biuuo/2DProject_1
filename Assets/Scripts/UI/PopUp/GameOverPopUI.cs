@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class StoryScUI : UIBase
+public class GameOverPopUI : UIBase
 {
     [Header("Buttons")]
     [SerializeField] private Button acceptBtn;
@@ -13,7 +13,7 @@ public class StoryScUI : UIBase
 
     private void OnEnable()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     private void OnClickReturnLobby()
@@ -23,6 +23,6 @@ public class StoryScUI : UIBase
             GameManager.Instance.ReturnToLobby();
         });
 
-        UIManager.Instance.CloseClearGamePopUI();
+        UIManager.Instance.CloseGameOverPopUI();
     }
 }

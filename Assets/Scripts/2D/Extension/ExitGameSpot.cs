@@ -6,7 +6,7 @@ public class ExitGameSpot : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            UIManager.Instance.OpenClearGamePopUI();
+            UIManager.Instance.OpenGameClearPopUI();
         }
     }
 }

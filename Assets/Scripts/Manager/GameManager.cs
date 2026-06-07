@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.ShowStartupUIOnGameStart();
     }
 
+    // 맨 처음 시작 화면
     public void OnLoginProcess()
     {
         CurrentState = GameState.Loading;
@@ -123,18 +124,25 @@ public class GameManager : MonoBehaviour
     public void OnClick_StartGame()
     {
         Time.timeScale = 1f;
-    }
-
-    public void ReturnToLobby()
-    {
-        Time.timeScale = 0f;
-        UIManager.Instance.OpenRobbyUI();
 
         CyborgPlayer player = FindObjectOfType<CyborgPlayer>();
         if (player != null)
         {
             player.ResetHP();
         }
+    }
+
+    // 플레이어 사망 관리
+    public void OnPlayerDead()
+    {
+        UIManager.Instance.OpenGameOverPopUI();
+    }
+
+    // 로비 돌아오기, 체력 리셋
+    public void ReturnToLobby()
+    {
+        Time.timeScale = 0f;
+        UIManager.Instance.OpenRobbyUI();
     }
 
     // 플레이어 캐릭터 등록

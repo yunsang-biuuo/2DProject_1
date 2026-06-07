@@ -95,6 +95,13 @@ public class CyborgPlayer : MonoBehaviour
     public void ResetHP()
     {
         _currentHp = _maxHp;
+        _isDead = false;
+        InputEnable = true;
+
+        if (_animator != null)
+        {
+            _animator.SetBool("IsDead", false);
+        }
     }
 
     public void Attack()    // 공격 순서 계산 및 실행 함수
@@ -132,9 +139,10 @@ public class CyborgPlayer : MonoBehaviour
         _rigidbody.linearVelocity = Vector2.zero; 
 
         _animationController.SetState(StatePlayer.Dead);
+        GameManager.Instance.OnPlayerDead();
     }
 
-    
+
     void Flip()     // 스프라이트 방향전환
     {
         _lookRight = !_lookRight;

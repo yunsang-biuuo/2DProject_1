@@ -53,8 +53,9 @@ public class AnimController_Player : MonoBehaviour
 
     private void ResetAllParameters()
     {
-        Animator_Player.SetBool("IsMoving", false);
+        Animator_Player.SetBool("IsWalking", false);
         Animator_Player.SetBool("IsRuning", false);
+        Animator_Player.SetBool("IsJumping", true);
         Animator_Player.SetBool("IsDead", false);
     }
 }

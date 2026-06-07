@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1149082506060793270}
   - component: {fileID: 1331868818983389483}
   m_Layer: 5
-  m_Name: ClearGamePopUI
+  m_Name: GameClearPopUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
