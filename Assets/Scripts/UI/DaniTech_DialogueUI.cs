@@ -7,14 +7,14 @@ public class DaniTech_DialogueUI : UIBase
     [SerializeField] private GameObject Layout_CharacterName;
     [SerializeField] private Text Text_Character;
     [SerializeField] private Text Text_Description;
-    [SerializeField] private DaniTech_UIButton Button_Next;
+    [SerializeField] private Button nextBtn;
 
     private string _currentDialogueId;
     private Queue<string> _descriptionQueue = new Queue<string>();
 
     private void Awake()
     {
-        Button_Next.BindOnClickButtonEvent(OnClick_Next);
+        nextBtn.onClick.AddListener(OnClick_Next);
     }
 
     private void OnEnable()

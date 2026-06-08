@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 
-public class StoryScUI : MonoBehaviour
+public class StoryScUI : UIBase
 {
     [Header("Buttons")]
     [SerializeField] private Button closeBtn;

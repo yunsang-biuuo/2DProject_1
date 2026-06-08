@@ -9,18 +9,18 @@ public class EnterGamePopUI : UIBase
     [SerializeField] private TMP_Text txt_ChapterName; // 챕터 이름을 보여줄 텍스트
 
     [Header("Buttons")]
-    [SerializeField] private Button btn_Enter;
-    [SerializeField] private Button btn_No;
-    [SerializeField] private Button btn_Close;
+    [SerializeField] private Button enterBtn;
+    [SerializeField] private Button noBtn;
+    [SerializeField] private Button closeBtn;
 
     private string _currentChapterId;
     private ChapterType _currentChapterType;
 
     private void Awake()
     {
-        btn_No.onClick.AddListener(ClosePopup);
-        btn_Close.onClick.AddListener(ClosePopup);
-        btn_Enter.onClick.AddListener(OnClickEnter);
+        noBtn.onClick.AddListener(ClosePopup);
+        closeBtn.onClick.AddListener(ClosePopup);
+        enterBtn.onClick.AddListener(OnClickEnter);
     }
 
     public void SetupPopup(ChapterType chapterType)

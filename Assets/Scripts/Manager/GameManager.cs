@@ -121,9 +121,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // 메뉴 UI 켜고, 체력 리셋
     public void OnClick_StartGame()
     {
         Time.timeScale = 1f;
+
+        UIManager.Instance.OpenMenuUI();
 
         CyborgPlayer player = FindObjectOfType<CyborgPlayer>();
         if (player != null)
@@ -138,10 +141,11 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.OpenGameOverPopUI();
     }
 
-    // 로비 돌아오기, 체력 리셋
+    // 로비 돌아오기
     public void ReturnToLobby()
     {
         Time.timeScale = 0f;
+        UIManager.Instance.CloseMenuUI();
         UIManager.Instance.OpenRobbyUI();
     }
 

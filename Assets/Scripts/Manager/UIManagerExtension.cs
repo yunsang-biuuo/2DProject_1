@@ -24,6 +24,7 @@ public enum UIType
     QuitPopUI,
     
     EnterGamePopUI,
+    ExitGamePopUI,
     GameClearPopUI,
     GameOverPopUI,
     RobbyUI,
@@ -124,6 +125,19 @@ public static class UIManagerExtension
         uiManager.ClosePopupUI(UIType.EnterGamePopUI);
     }
 
+    public static void OpenExitGamePopUI(this UIManager uiManger)
+    {
+        var uiBase = uiManger.OpenPopupUI(UIType.ExitGamePopUI);
+        if (uiBase == null)
+        {
+            Debug.LogWarning($"UI가 생성되지 않았습니다");
+            return;
+        }
+    }
+    public static void CloseExitGamePopUI(this UIManager uiManager)
+    {
+        uiManager.ClosePopupUI(UIType.ExitGamePopUI);
+    }
 
     public static void OpenGameClearPopUI(this UIManager uiManger)
     {
@@ -201,7 +215,7 @@ public static class UIManagerExtension
 
     // ------------------------------------------------------------------
     // contentUI
-    public static void OpenInGameMenu(this UIManager uiManger)
+    public static void OpenMenuUI(this UIManager uiManger)
     {
         var uiBase = uiManger.OpenContentUI(UIType.MenuUI);
         if (uiBase == null)
