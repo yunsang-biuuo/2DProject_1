@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class DaniTechResourceManager : MonoBehaviour
+public class ResourceManager : MonoBehaviour
 {
-    public static DaniTechResourceManager Inst { get; set; }
+    public static ResourceManager Inst { get; set; }
 
     private void Awake()
     {

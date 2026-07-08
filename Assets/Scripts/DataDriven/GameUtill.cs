@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using UnityEditor.Overlays;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.LowLevelPhysics2D.PhysicsShape;
 
 public static class GameUtil
 {
@@ -20,6 +22,12 @@ public static class GameUtil
         GameDataManager.Instance.LoadDialogueData("Dialogue");
         GameDataManager.Instance.LoadDialogueGroupData("DialogueGroup");
         GameDataManager.Instance.LoadFieldObjectData("FieldObject");
+        GameDataManager_2.Instance.LoadData<EntityData>("Entity");
+        GameDataManager_2.Instance.LoadData<TowerData>("Tower");
+        GameDataManager_2.Instance.LoadData<AbilityData>("Ability");
+        GameDataManager_2.Instance.LoadData<EnemyData>("Enemy");
+        GameDataManager_2.Instance.LoadData<StageData>("Stage");
+        GameDataManager_2.Instance.LoadData<WaveData>("Wave");
     }
 
     public static int CalcCharacterFinalDamage(int curCharacterLevel, int levelPerDamage, bool isCritical)
@@ -46,7 +54,7 @@ public static class GameUtil
     // 리소스 로딩(비동기)
     public static async UniTask<Sprite> LoadAndSetSpriteImage(Image targetImage, string spritePath)
     {
-        Sprite sprite = await DaniTechResourceManager.Inst.LoadSprite(spritePath);
+        Sprite sprite = await ResourceManager.Inst.LoadSprite(spritePath);
         if (sprite != null)
         {
             targetImage.sprite = sprite;
@@ -56,7 +64,7 @@ public static class GameUtil
 
     public static async UniTaskVoid LoadAndPlayAudioClip(AudioSource audioSource, string audioPath, bool isLoop = false)
     {
-        AudioClip clip = await DaniTechResourceManager.Inst.LoadAsset<AudioClip>(audioPath);
+        AudioClip clip = await ResourceManager.Inst.LoadAsset<AudioClip>(audioPath);
         if (clip == null)
         {
             Debug.LogError($"{audioPath}를 찾을 수 없습니다! 어드레서블 설정이 되어 있는지 확인해주세요.");
@@ -77,13 +85,43 @@ public static class GameUtil
 
     public static async UniTaskVoid LoadAndSetTexture(RawImage targetRawImage, string texturePath)
     {
+        // 비동기로 로드하기 전까지는 해당 오브젝트를 잠깐 비활성화 해준다
         targetRawImage.gameObject.SetActive(false);
-        Texture texture = await DaniTechResourceManager.Inst.LoadAsset<Texture>(texturePath);
+        Texture texture = await ResourceManager.Inst.LoadAsset<Texture>(texturePath);
         if (texture != null)
         {
             targetRawImage.texture = texture;
         }
         targetRawImage.gameObject.SetActive(true);
+    }
+
+    public static async UniTask<Animator> LoadAndMeshObjectAndBindAnimator(Transform parent, string meshObjectPath, string specificAnimContollerPath = "")
+    {
+        // 1) 3D Mesh 오브젝트를 먼저 로드해서 동적 생성한다
+        var loadedMeshObject = await ResourceManager.Inst.InstantiateAsync(meshObjectPath, parent);
+        if (loadedMeshObject == null)
+        {
+            Debug.LogError($"{meshObjectPath}를 찾을 수 없습니다! 어드레서블 설정이 되어 있는지 확인해주세요.");
+            return null;
+        }
+
+        // 2) 3D Mesh 오브젝트가 하위에 있는 경우 실패할 수 있으니 꼭 최상위 부모 오브젝트에 Animator을 넣어두자
+        var animator = loadedMeshObject.GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError($"{loadedMeshObject.name}프리팹에 최상위 오브젝트가 Animator를 갖고 있지 않습니다!");
+            return null;
+        }
+
+        // 3) 그 3D Mesh에 기본 애니메이션 컨트롤러가 아니라 지정한 걸로 바꾸고 싶다면 명시
+        // ex.PlayerController 또는 NpcAnimController 같이 내가 만든 것을 써야할때
+        if (string.IsNullOrEmpty(specificAnimContollerPath) == false)
+        {
+            var loadedAnimatorController = await ResourceManager.Inst.LoadAsset<RuntimeAnimatorController>(specificAnimContollerPath);
+            animator.runtimeAnimatorController = loadedAnimatorController;
+        }
+
+        return animator;
     }
 
     // 다이얼로그

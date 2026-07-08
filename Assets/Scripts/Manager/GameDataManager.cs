@@ -68,6 +68,7 @@ public class GameDataManager : MonoBehaviour
         return new Dictionary<string, T>();
     }
 
+    //--------------------------------------------------------------------------
     public void LoadSkillData(string jsonPath)
     {
         SkillDataList = LoadData<SkillData>(jsonPath);
