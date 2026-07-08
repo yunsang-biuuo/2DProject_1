@@ -17,13 +17,12 @@ public class GameDataManager_2 : MonoBehaviour
         GameUtil.LoadFullData();
     }
 
-    // --- JsonUtility의 한계를 극복하기 위한 Wrapper 클래스 ---
+    // JsonUtility의 한계를 극복하기 위한 Wrapper 클래스
     [Serializable]
     private class SerializationWrapper<T>
     {
         public List<T> items; // JSON 파일의 루트 키 이름이 "items"여야 함
     }
-    // ---------------------------------------------------
 
     private Dictionary<string, object> _dataList = new Dictionary<string, object>();
 
@@ -37,25 +36,6 @@ public class GameDataManager_2 : MonoBehaviour
             return dict.Keys.ToList();
         }
         return null;
-    }
-
-    public List<string> GetAllTowerIds()
-    {
-        return GetAllId<TowerData>();
-    }
-    public List<string> GetEntityIds()
-    {
-        return GetAllId<EntityData>();
-    }
-
-    public List<string> GetEnemyIds()
-    {
-        return GetAllId<EnemyData>();
-    }
-
-    public List<string> GetStageIds()
-    {
-        return GetAllId<StageData>();
     }
 
     private Dictionary<string, T> LoadJsonData<T>(string tableName) where T : GameDataBase
@@ -119,5 +99,35 @@ public class GameDataManager_2 : MonoBehaviour
             return dict[id];
         }
         return null;
+    }
+
+    public void LoadAllData()
+    {
+        LoadData<EntityData>("Entity");
+        LoadData<TowerData>("Tower");
+        LoadData<AbilityData>("Ability");
+        LoadData<EnemyData>("Enemy");
+        LoadData<StageData>("Stage");
+        LoadData<WaveData>("Wave");
+    }
+
+    //-------------------------------------------------------
+    public List<string> GetAllTowerIds()
+    {
+        return GetAllId<TowerData>();
+    }
+    public List<string> GetEntityIds()
+    {
+        return GetAllId<EntityData>();
+    }
+
+    public List<string> GetEnemyIds()
+    {
+        return GetAllId<EnemyData>();
+    }
+
+    public List<string> GetStageIds()
+    {
+        return GetAllId<StageData>();
     }
 }

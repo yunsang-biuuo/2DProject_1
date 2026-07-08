@@ -13,21 +13,11 @@ public static class GameUtil
 
     public static void LoadFullData()
     {
-        GameDataManager.Instance.LoadSkillData("Skill");
-        GameDataManager.Instance.LoadCharacterData("Character");
-        GameDataManager.Instance.LoadWeaponData("Weapon");
-        GameDataManager.Instance.LoadCostumeData("Costume");
-        GameDataManager.Instance.LoadItemData("Item");
-        GameDataManager.Instance.LoadMonsterData("Monster");
-        GameDataManager.Instance.LoadDialogueData("Dialogue");
-        GameDataManager.Instance.LoadDialogueGroupData("DialogueGroup");
-        GameDataManager.Instance.LoadFieldObjectData("FieldObject");
-        GameDataManager_2.Instance.LoadData<EntityData>("Entity");
-        GameDataManager_2.Instance.LoadData<TowerData>("Tower");
-        GameDataManager_2.Instance.LoadData<AbilityData>("Ability");
-        GameDataManager_2.Instance.LoadData<EnemyData>("Enemy");
-        GameDataManager_2.Instance.LoadData<StageData>("Stage");
-        GameDataManager_2.Instance.LoadData<WaveData>("Wave");
+        if (GameDataManager.Instance != null)
+        {
+            GameDataManager.Instance.LoadAll();
+        }
+        GameDataManager_2.Instance.LoadAllData();
     }
 
     public static int CalcCharacterFinalDamage(int curCharacterLevel, int levelPerDamage, bool isCritical)

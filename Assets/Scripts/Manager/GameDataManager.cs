@@ -14,7 +14,6 @@ public class GameDataManager : MonoBehaviour
         GameUtil.LoadFullData();
     }
 
-    // JsonUtility의 한계를 극복하기 위한 Wrapper 클래스
     [Serializable]
     private class SerializationWrapper<T>
     {
@@ -69,51 +68,63 @@ public class GameDataManager : MonoBehaviour
     }
 
     //--------------------------------------------------------------------------
-    public void LoadSkillData(string jsonPath)
+    public void LoadSkillData(string jsonPath = "Skill")
     {
         SkillDataList = LoadData<SkillData>(jsonPath);
     }
 
-    public void LoadCharacterData(string jsonPath)
+    public void LoadCharacterData(string jsonPath = "Character")
     {
         CharacterDataList = LoadData<CharacterData>(jsonPath);
     }
 
-    public void LoadWeaponData(string jsonPath)
+    public void LoadWeaponData(string jsonPath = "Weapon")
     {
         WeaponDataList = LoadData<WeaponData>(jsonPath);
     }
 
-    public void LoadCostumeData(string jsonPath)
+    public void LoadCostumeData(string jsonPath = "Costume")
     {
         CostumeDataList = LoadData<CostumeData>(jsonPath);
     }
 
-    public void LoadItemData(string jsonPath)
+    public void LoadItemData(string jsonPath = "Item")
     {
         ItemDataList = LoadData<ItemData>(jsonPath);
     }
 
-    public void LoadMonsterData(string jsonPath)
+    public void LoadMonsterData(string jsonPath = "Monster")
     {
         MonsterDataList = LoadData<MonsterData>(jsonPath);
     }
 
-    public void LoadDialogueData(string jsonPath)
+    public void LoadDialogueData(string jsonPath = "Dialogue")
     {
         DialogueDataList = LoadData<DialogueData>(jsonPath);
     }
 
-    public void LoadDialogueGroupData(string jsonPath)
+    public void LoadDialogueGroupData(string jsonPath = "DialogueGroup")
     {
         DialogueGroupDataList = LoadData<DialogueGroupData>(jsonPath);
     }
 
-    public void LoadFieldObjectData(string jsonPath)
+    public void LoadFieldObjectData(string jsonPath = "FieldObject")
     {
         FieldObjectDataList = LoadData<FieldObjectData>(jsonPath);
     }
 
+    public void LoadAll()
+    {
+        LoadSkillData();
+        LoadCharacterData();
+        LoadWeaponData();
+        LoadCostumeData();
+        LoadItemData();
+        LoadMonsterData();
+        LoadDialogueData();
+        LoadDialogueGroupData();
+        LoadFieldObjectData();
+    }
 
     // -------------- 아래는 사용을 위한 부분들을 메서드 정의 -----------------
 
