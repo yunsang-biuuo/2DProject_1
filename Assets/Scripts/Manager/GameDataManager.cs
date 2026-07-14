@@ -68,62 +68,17 @@ public class GameDataManager : MonoBehaviour
     }
 
     //--------------------------------------------------------------------------
-    public void LoadSkillData(string jsonPath = "Skill")
-    {
-        SkillDataList = LoadData<SkillData>(jsonPath);
-    }
-
-    public void LoadCharacterData(string jsonPath = "Character")
-    {
-        CharacterDataList = LoadData<CharacterData>(jsonPath);
-    }
-
-    public void LoadWeaponData(string jsonPath = "Weapon")
-    {
-        WeaponDataList = LoadData<WeaponData>(jsonPath);
-    }
-
-    public void LoadCostumeData(string jsonPath = "Costume")
-    {
-        CostumeDataList = LoadData<CostumeData>(jsonPath);
-    }
-
-    public void LoadItemData(string jsonPath = "Item")
-    {
-        ItemDataList = LoadData<ItemData>(jsonPath);
-    }
-
-    public void LoadMonsterData(string jsonPath = "Monster")
-    {
-        MonsterDataList = LoadData<MonsterData>(jsonPath);
-    }
-
-    public void LoadDialogueData(string jsonPath = "Dialogue")
-    {
-        DialogueDataList = LoadData<DialogueData>(jsonPath);
-    }
-
-    public void LoadDialogueGroupData(string jsonPath = "DialogueGroup")
-    {
-        DialogueGroupDataList = LoadData<DialogueGroupData>(jsonPath);
-    }
-
-    public void LoadFieldObjectData(string jsonPath = "FieldObject")
-    {
-        FieldObjectDataList = LoadData<FieldObjectData>(jsonPath);
-    }
-
     public void LoadAll()
     {
-        LoadSkillData();
-        LoadCharacterData();
-        LoadWeaponData();
-        LoadCostumeData();
-        LoadItemData();
-        LoadMonsterData();
-        LoadDialogueData();
-        LoadDialogueGroupData();
-        LoadFieldObjectData();
+        SkillDataList = LoadData<SkillData>("Skill");
+        CharacterDataList = LoadData<CharacterData>("Character");
+        WeaponDataList = LoadData<WeaponData>("Weapon");
+        CostumeDataList = LoadData<CostumeData>("Costume");
+        ItemDataList = LoadData<ItemData>("Item");
+        MonsterDataList = LoadData<MonsterData>("Monster");
+        DialogueDataList = LoadData<DialogueData>("Dialogue");
+        DialogueGroupDataList = LoadData<DialogueGroupData>("DialogueGroup");
+        FieldObjectDataList = LoadData<FieldObjectData>("FieldObject");
     }
 
     // -------------- 아래는 사용을 위한 부분들을 메서드 정의 -----------------

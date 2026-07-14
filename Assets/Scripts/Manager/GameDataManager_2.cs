@@ -40,14 +40,11 @@ public class GameDataManager_2 : MonoBehaviour
 
     private Dictionary<string, T> LoadJsonData<T>(string tableName) where T : GameDataBase
     {
-        // 1. 경로 설정 (확장자 .json 제외!)
         // Resources/JsonOutput 폴더
         string resourcePath = $"JsonOutput/{tableName}";
 
-        // 2. 리소스 로드
         TextAsset textAsset = Resources.Load<TextAsset>(resourcePath);
 
-        // 3. 파일 존재 여부 체크
         if (textAsset == null)
         {
             Debug.LogError($"[Error] 리소스를 찾을 수 없습니다: Resources/{resourcePath}");
@@ -58,14 +55,12 @@ public class GameDataManager_2 : MonoBehaviour
         {
             string jsonString = textAsset.text;
 
-            // 4. JsonUtility용 Wrapper 트릭 적용
             string wrappedJson = "{\"items\":" + jsonString + "}";
             SerializationWrapper<T> wrapper = JsonUtility.FromJson<SerializationWrapper<T>>(wrappedJson);
 
             if (wrapper != null && wrapper.items != null)
             {
                 Debug.Log($"{typeof(T).Name} 데이터를 {wrapper.items.Count}개 로드했습니다.");
-                // ToDictionary를 사용하려면 각 클래스(T)에 Id 필드가 있어야 합니다.
                 return wrapper.items.ToDictionary(item => item.Id.ToString());
             }
         }
